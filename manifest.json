@@ -1,5 +1,4 @@
 {
-
   "manifest_version": 2,
   "name": "Remove German Gender Language",
   "version": "2.4",
@@ -32,5 +31,4 @@
     "tabs",
 	"storage"
   ]
-
 }
