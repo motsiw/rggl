@@ -18,8 +18,6 @@ Das Add-On entfernt folgendes:
 Viele Spezialfälle werden berücksichtigt. Dadurch werden deutschsprachige Webseiten besser lesbar dargestellt. 
 Das gilt auch für Zeitungs-Webseiten wie heise, TAZ, Die Zeit, Frankfurter Rundschau usw.
 
-Die ZIP-Datei enthält das signierte Add-On sowie den Quellcode.
-
 Bedienung:
 In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt die Farbe beim Klicken.
 - schwarz: Gender-Konstruktionen werden gefiltert
