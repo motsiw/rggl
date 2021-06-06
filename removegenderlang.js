@@ -1,5 +1,6 @@
 // Remove German Gender Language
-// v2.3
+// v2.4
+// License: GPL 3.0
 
 
 // Einstellungen laden
