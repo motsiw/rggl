@@ -78,6 +78,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/(h|H)erausforder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$erausforderer$2");
 	  str = str.replace(/(h|H)inder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$inderer$2");
 	  str = str.replace(/(p|P)lauder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$lauderer$2");
+	  str = str.replace(/(m|M)euter(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$euterer$2");
+	  str = str.replace(/(v|V)eräußer(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$eräußerer$2");
 	  
 	  // aus ein(e) wird ein, aus Liebe:r wird Lieber, zusammen mit Nomen:
 	  str = str.replace(/(ein|Ein)(\:e|\/\-e|\*e|\_e|\(e\)) (.*?)(\:in|\*in|\_in|\/\-in|\(in\))([ ,).“"!\--]|$)/g,rot1+"$1 $3$5"+rot2);
