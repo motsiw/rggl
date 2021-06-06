@@ -2,10 +2,11 @@
 Remove German Gender Language
 -----------------------------
 
-v2.3 (05.06.2021)
+v2.4 (05.06.2021)
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
+Lizenz: GNU GENERAL PUBLIC LICENSE Version 3
 
 Das Add-On entfernt folgendes:
 * Gender-Sternchen (Anwender*innen)
@@ -32,9 +33,11 @@ XPI-Datei per Drag & Drop in den Firefox ziehen, Installation bestätigen.
 
 Version History
 
+2.4
+- erste öffentliche Version
+
 2.3
 - Code aufgeräumt
-- erste öffentliche Version
 
 2.2
 - Kleinere Korrekturen
