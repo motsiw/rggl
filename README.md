@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v2.4 (05.06.2021)
+v2.5 (xx.06.2021)
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
@@ -32,6 +32,10 @@ XPI-Datei per Drag & Drop in den Firefox ziehen, Installation bestätigen.
 
 
 Version History
+
+2.5
+- Sonderfälle ergänzt 
+  (Wilderer, Zauberer, Plünderer, Bewunderer, Herausforderer, Hinderer, Plauderer, Meuterer, Veräußerer)
 
 2.4
 - erste öffentliche Version
