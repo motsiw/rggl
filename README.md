@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v2.5 (08.06.2021)
+v2.6 (xx.06.2021)
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
