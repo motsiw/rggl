@@ -1,6 +1,6 @@
 // Remove German Gender Language
-// v2.5
-// License: GPL 3.0
+// v2.6
+// License: GPL v3.0
 
 
 // Einstellungen laden
@@ -37,11 +37,11 @@ function removeGender(sollrot) {
 	
 	for (i = 0; i < result.length; i++) {
 	  str = result[i].innerHTML;
-	  oldstr = str;
 	  
 	  // Weiche Trennstriche entfernen (taz)
 	  str = str.replace(/­/g,"");
-	  
+	  oldstr = str;
+		
 	  
 	  // Konstruktionen wie Der/die oder sie:er durch das generische Maskulinum ersetzen
 	  str = str.replace(/(der|Der)(\/|\_|\:|\*)die([ ,).“"!-])/g,rot1+"$1$3"+rot2);
