@@ -161,15 +161,15 @@ function removeGender(sollrot) {
 	  
 	  
 	  // Dasselbe für den Genitiv
-	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1 $2en$4"+rot2);
-	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])Innen([ ,).“"!\--]|$)/g,rot1+"$1 $2en$3"+rot2);
+	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
+	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])Innen([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
 	  
 	  
 	  
 	  // Bei Nomen, die auf -or, -ist, -leg, -nom usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|grant)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1en$4"+rot2);
-	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|grant)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
+	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|grant|peut)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1en$4"+rot2);
+	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|grant|peut)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
 	  
 	  
 	  
