@@ -33,6 +33,9 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 Version History
 
+2.6
+- Performance verbessert
+
 2.5
 - Sonderfälle ergänzt 
   (Wilderer, Zauberer, Plünderer, Bewunderer, Herausforderer, Hinderer, Plauderer, Meuterer, Veräußerer)
