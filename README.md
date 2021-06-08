@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v2.5 (xx.06.2021)
+v2.5 (08.06.2021)
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
@@ -17,18 +17,18 @@ Das Add-On entfernt folgendes:
 * Klammerlösung (Anwender(innen))
 
 Viele Spezialfälle werden berücksichtigt. Dadurch werden deutschsprachige Webseiten besser lesbar dargestellt. 
-Das gilt auch für Zeitungs-Webseiten wie heise, TAZ, Die Zeit, Frankfurter Rundschau usw.
+Das gilt auch für Zeitungs-Webseiten wie heise, taz, Die Zeit, Frankfurter Rundschau usw.
 
 Bedienung:
 In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt die Farbe beim Klicken.
 - schwarz: Gender-Konstruktionen werden gefiltert
 - rot: Gender-Konstruktionmen werden gefiltert und die Änderungen farbig markiert
 - x: Deaktiviert
-- Der Knopf zeigt die Zahl der Änderungen auf der aktuellen Webseite.
+- Der Knopf zeigt die Zahl der geänderten Elemente auf der aktuellen Webseite.
 - In der Konsole (F12) lassen sich alle Änderungen im Detail nachvollziehen (Tipp: Filtern nach rggl).
 
 Installation:
-XPI-Datei per Drag & Drop in den Firefox ziehen, Installation bestätigen.
+https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 
 Version History
@@ -36,6 +36,9 @@ Version History
 2.5
 - Sonderfälle ergänzt 
   (Wilderer, Zauberer, Plünderer, Bewunderer, Herausforderer, Hinderer, Plauderer, Meuterer, Veräußerer)
+- Verbesserung bei weichen Trennstrichen (taz)
+- farbliche Hervorhebung verbessert
+- schönere Icons
 
 2.4
 - erste öffentliche Version
