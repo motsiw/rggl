@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v2.6 (xx.06.2021)
+v2.7 (09.06.2021)
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
@@ -33,8 +33,14 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 Version History
 
+2.7
+- Muslime, Kurden, Wölfinnen, Türken, Gefährten, Freund*innenkreis, 
+- Irinnen, Afghaninnen, Ungarinnen, Kasachinnen, Kongolesinnen, Rumänen
+- Sonderbehandlung taz: Vokale + Trema werden zu Umlauten konvertiert
+
 2.6
 - Performance verbessert
+- Bugfix
 
 2.5
 - Sonderfälle ergänzt 
