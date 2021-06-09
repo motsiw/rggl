@@ -35,6 +35,8 @@ Version History
 
 2.8
 - Ergänzt: Nomaden
+- Bugfix: Franzosee
+- Bugfix: LinkedIn
 
 2.7
 - Muslime, Kurden, Wölfinnen, Türken, Gefährten, Freund*innenkreis, 
