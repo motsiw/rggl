@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v2.7
+// v2.8
 // License: GPL v3.0
 
 
@@ -190,8 +190,8 @@ function removeGender(sollrot) {
 	  
 	  // Bei Nomen, die auf -or, -ist, -leg, -nom usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1en$3"+rot2);
-	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
+	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1en$3"+rot2);
+	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
 	  
 	  // Spezialfall Ir*innen
 	  str = str.replace(/ Ir(\:|\*|\/\-|\_|)(innen|Innen)([ ,).“"!\--]|$)/g,rot1+" Iren$3"+rot2);
