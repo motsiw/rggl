@@ -47,6 +47,10 @@ function removeGender(sollrot) {
 	  str = str.replace(/O\O0308/g,"Ö");
 	  str = str.replace(/ä\a0308/g,"ä");
 	  str = str.replace(/Ä\A0308/g,"Ä");
+	  
+	  // LinkedIn retten
+	  str = str.replace(/LinkedIn/g,"Linkedin");
+	  
 	  oldstr = str;
 		
 	  
@@ -233,7 +237,7 @@ function removeGender(sollrot) {
 	
 	  // Korrektur Isaelisen, Franzos
 	  str = str.replace(/sraelisen/g,"sraelis");
-	  str = str.replace(/ranzos/g,"ranzose");
+	  str = str.replace(/ranzos([ ,).“"!\--]|$)/g,"ranzose$1");
 	  str = str.replace(/ein Katz([ ,\).“_"!\--]|$)/g,"eine Katze$1");
 
 
