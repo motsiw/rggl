@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v2.6
+// v2.7
 // License: GPL v3.0
 
 
@@ -38,8 +38,15 @@ function removeGender(sollrot) {
 	for (i = 0; i < result.length; i++) {
 	  str = result[i].innerHTML;
 	  
-	  // Weiche Trennstriche entfernen (taz)
+	  // Sonderbehandlung taz: Weiche Trennstriche entfernen
 	  str = str.replace(/­/g,"");
+	  // Sonderbehandlung taz / PS-Fonts: Vokale plus Trema zu richtigen Umlauten machen
+	  str = str.replace(/u\u0308/g,"ü");
+	  str = str.replace(/U\u0308/g,"Ü");
+	  str = str.replace(/o\o0308/g,"ö");
+	  str = str.replace(/O\O0308/g,"Ö");
+	  str = str.replace(/ä\a0308/g,"ä");
+	  str = str.replace(/Ä\A0308/g,"Ä");
 	  oldstr = str;
 		
 	  
@@ -113,8 +120,8 @@ function removeGender(sollrot) {
 	  
 	  
 	  // Jüdinnen/Juden bzw. Juden/Jüdinnen
-	  str = str.replace(/([ ,).“"!-])([a-zA-ZüöäßÜÖÄ]*)(innen)[\/\*\:\-\_]([a-zA-ZüöäßÜÖÄ]*)(en)([ ,).“"!-])/g,rot1+"$1$4$5$6"+rot2);
-	  str = str.replace(/([ ,).“"!-])([a-zA-ZüöäßÜÖÄ]*)(en)[\/\*\:\-\_]([a-zA-ZüöäßÜÖÄ]*)(innen)([ ,).“"!-])/g,rot1+"$1$4$5$6"+rot2);
+	  str = str.replace(/([ ,).“"!-])([a-zA-ZüöäßÜÖÄ]*?)(innen)[\/\*\:\-\_]([a-zA-ZüöäßÜÖÄ]*?)(en)([ ,).“"!-])/g,rot1+"$1$4$5$6"+rot2);
+	  str = str.replace(/([ ,).“"!-])([a-zA-ZüöäßÜÖÄ]*?)(en)[\/\*\:\-\_]([a-zA-ZüöäßÜÖÄ]*?)(innen)([ ,).“"!-])/g,rot1+"$1$4$5$6"+rot2);
 	  
 	  
 	  
@@ -125,27 +132,35 @@ function removeGender(sollrot) {
 	  
 	  // Sonderkonstrukt Staatsbürger:innenschaft
 	  str = str.replace(/([a-züöäß])(\*|\:|\_)innen(schaft)([ ,).“"!\--]|$)/g,rot1+"$1$3$4"+rot2);
+	  str = str.replace(/([a-züöäß])Innen(schaft)([ ,).“"!\--]|$)/g,rot1+"$1$2$3"+rot2);
+	  // Sonderkonstrukt Freun*Innenkreis
+	  str = str.replace(/(freund|Freund)(\*|\:|\_)innen(kreis)([ ,).“"!\--]|$)/g,rot1+"$1es$3$4"+rot2);
+	  str = str.replace(/(freund|Freund)Innen(kreis)([ ,).“"!\--]|$)/g,rot1+"$1es$2$3"+rot2);
+	  
 	  
 	  
 
 	  // und hier die Mehrzahl für Bauern und Nachbarn
-	  str = str.replace(/(auer|achbar)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1n$4"+rot2);
-	  str = str.replace(/([A-Za-zÜÖÄüöäß])(auer|achbar)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2n$4"+rot2);
+	  str = str.replace(/(bauer|achbar)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1n$4"+rot2);
+	  str = str.replace(/([A-Za-zÜÖÄüöäß])(Bauer|bauer|achbar)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2n$4"+rot2);
 	  
+	  // Muslime
+	  str = str.replace(/(uslim)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1e$4"+rot2);
+	  str = str.replace(/([A-Za-zÜÖÄüöäß])(uslim)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2e$4"+rot2);
 	  
 
 	  // Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch en ersetzt
 	  // wenn ein Vorsatzwort den Dativ vorgibt
 	  // Beispiel: Ingenieur:innen => Ingenieure, DomteurInnen => Dompteure, Päpst:innen => Päpste
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*)(eur|pst|bst|hund|dar)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3$4en$7"+rot2);
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*)(eur|pst|bst|hund|Hund|dar)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2 $3$4en$6"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*?)(eur|pst|bst|hund|dar|wölf)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3$4en$7"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*?)(eur|pst|bst|hund|Hund|dar|Wölf|wölf)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2 $3$4en$6"+rot2);
 
 
 
 	  // Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch e ersetzt
 	  // Beispiel: Ingenieur:innen => Ingenieure, DomteurInnen => Dompteure, Päpst:innen => Päpste
-	  str = str.replace(/(eur|pst|bst|hund|Hund|dar)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/g,rot1+"$1e$4"+rot2);
-	  str = str.replace(/([a-züöäß])(eur|pst|bst|hund|Hund|dar)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2e$4"+rot2);
+	  str = str.replace(/(eur|pst|bst|hund|Hund|dar|wölf|Wölf)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/g,rot1+"$1e$4"+rot2);
+	  str = str.replace(/([a-züöäß])(eur|pst|bst|hund|Hund|dar|wölf|Wölf)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2e$4"+rot2);
 	  
 	  
 	  
@@ -153,24 +168,33 @@ function removeGender(sollrot) {
 	  // Beispiel: unter Therapeut*innen => unter Therapeuten
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
 	  
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])Innen([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])(\:in|\*in|\_in|\/\-in|\(in\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])In([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])Innen([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])(\:in|\*in|\_in|\/\-in|\(in\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])In([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
 	  
+	  
+	  // Ärzte, Freunde und Hunde
+	  str = str.replace(/(hund|ärzt|freund)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1e$3"+rot2);
+	  str = str.replace(/(Hund|hund|ärzt|Ärzt|Freund|freund)(Innen)([ ,).“"!-]|$)/g,rot1+"$1e$3"+rot2);
 	  
 	  
 	  // Dasselbe für den Genitiv
-	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
-	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*[bcdfghjklmnpqstvwxz])Innen([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
+	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
+	  str = str.replace(/(der|ner|ter|nger)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])Innen([ ,).“"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
 	  
+	  // Beamte
+	  str = str.replace(/(beamt)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1e$3"+rot2);
+	  str = str.replace(/(Beamt|beamt)(Innen)([ ,).“"!-]|$)/g,rot1+"$1e$3"+rot2);
 	  
 	  
 	  // Bei Nomen, die auf -or, -ist, -leg, -nom usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|grant|peut)(\:|\*|\/\-|\_)(innen)([ ,).“"!\--]|$)/gi,rot1+"$1en$4"+rot2);
-	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|grant|peut)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
+	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1en$3"+rot2);
+	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
 	  
+	  // Spezialfall Ir*innen
+	  str = str.replace(/ Ir(\:|\*|\/\-|\_|)(innen|Innen)([ ,).“"!\--]|$)/g,rot1+" Iren$3"+rot2);
 	  
 	  
 	  // und hier die Einzahl für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in
@@ -179,35 +203,25 @@ function removeGender(sollrot) {
 	  
 	  
 	  
-	  // Klienten und Kunden
-	  str = str.replace(/(klient|kund)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1en$3"+rot2);
-	  str = str.replace(/(Klient|Kund)(Innen)([ ,).“"!-]|$)/g,rot1+"$1en$3"+rot2);
-
-	  // Beamte, Ärzte und Hunde
-	  str = str.replace(/(beamt|hund|ärzt|freund)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1e$3"+rot2);
-	  str = str.replace(/(Beamt|beamt|Hund|hund|ärzt|Ärzt|Freund|freund)(Innen)([ ,).“"!-]|$)/g,rot1+"$1e$3"+rot2);
-	  
-	  
-	  
 	  // Konstruktionen mit "zufolge"
-	  str = str.replace(/([a-zA-ZüöäßÜÖÄ]*)(\:innen|\*innen|\_innen|\/\-innen|\(innen\)) zufolge([ ,).“"!\--]|$)/gi,rot1+"$1n zufolge$3"+rot2);
-	  str = str.replace(/([a-zA-ZüöäßÜÖÄ]*)(Innen) zufolge([ ,).“"!\--]|$)/g,rot1+"$1n zufolge$3"+rot2);
+	  str = str.replace(/([a-zA-ZüöäßÜÖÄ]*?)(\:innen|\*innen|\_innen|\/\-innen|\(innen\)) zufolge([ ,).“"!\--]|$)/gi,rot1+"$1n zufolge$3"+rot2);
+	  str = str.replace(/([a-zA-ZüöäßÜÖÄ]*?)(Innen) zufolge([ ,).“"!\--]|$)/g,rot1+"$1n zufolge$3"+rot2);
 	  
 	  
 	  
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Dativ, dann wird *innen zu n, wenn das Nomen auf 'r' endet
 	  // Beispiel: den Arbeiter:innen => den Arbeitern
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?r)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3n$5"+rot2);
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|ren|vor|zu|igen)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?r)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2 $3n$5"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?r)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/gi,rot1+"$1$2 $3n$5"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([a-zA-ZüöäßÜÖÄ]*?r)(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$2 $3n$5"+rot2);
 
 
 
 
 	  // In alle übrigen Fällen wird das *innen schlicht entfernt
 	  // Beispiel: Schüler_innen => Schüler
-	  str = str.replace(/([a-züöäß])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).“"!\--]|$)/g,rot1+"$1$3"+rot2);
-	  str = str.replace(/([a-züöäß])(Innen)([ ,).“"!\--]|$)/g,rot1+"$1$3"+rot2);
+	  str = str.replace(/([a-züöäß])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))/g,rot1+"$1"+rot2);
+	  str = str.replace(/([a-züöäß])(Innen)/g,rot1+"$1"+rot2);
 	  
 	  
 	  
