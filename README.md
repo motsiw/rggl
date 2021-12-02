@@ -2,7 +2,8 @@
 Remove German Gender Language
 -----------------------------
 
-v2.9 (02.12.2021)
+v3.0 (03.12.2021)
+
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
@@ -32,6 +33,12 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 
 Version History
+
+3.0
+- Ergänzt: Kommilitonen, Zeugen, Kosovare
+- Bugfix: Satzzeichen '?' verhinderte Korrektur
+- Bugfix: erzählen Berufsanfänger
+- Bugfix: Juden:Jüdinnen wurde zu Jüdinnen - versehentlich generisches Femininum benutzt ;)
 
 2.9
 - Ergänzt: Jüd*innen, Griech*innen
