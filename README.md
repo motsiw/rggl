@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v2.8 (xx.06.2021)
+v2.9 (02.12.2021)
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
 Kleines Add-On für den Firefox.
@@ -32,6 +32,11 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 
 Version History
+
+2.9
+- Ergänzt: Jüd*innen, Griech*innen
+- Bugfix: Satzzeichen 'Doppelpunkt' verhinderte Korrektur
+- Kompatibilität maximiert / weniger obtrusiv (Text-Nodes anstatt innerHTML)
 
 2.8
 - Ergänzt: Nomaden
