@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v3.3
+// v3.4
 // License: GPL v3.3
 
 
@@ -154,9 +154,10 @@ function removeGender(sollrot) {
 	  // Sonderkonstrukt Staatsbürger:innenschaft
 	  str = str.replace(/([a-züöäß])(\*|\:|\_)innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$3$4"+rot2);
 	  str = str.replace(/([a-züöäß])Innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2$3"+rot2);
-	  // Sonderkonstrukt Freun*Innenkreis
-	  str = str.replace(/(freund|Freund)(\*|\:|\_)innen(kreis)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$3$4"+rot2);
-	  str = str.replace(/(freund|Freund)Innen(kreis)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$2$3"+rot2);
+
+	  // Sonderkonstrukt Freun*Innenkreis(e)
+	  str = str.replace(/(freund|Freund)(\*|\:|\_)innen(kreis)(|e)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$3$4$5"+rot2);
+	  str = str.replace(/(freund|Freund)Innen(kreis)(|e)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$2$3$4"+rot2);
 
 	  // und hier die Mehrzahl für Bauern und Nachbarn
 	  str = str.replace(/(bauer|achbar)(\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/gi,rot1+"$1n$4"+rot2);

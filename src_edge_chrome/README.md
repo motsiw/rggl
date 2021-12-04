@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v3.3 (04.12.2021)
+v3.4 (04.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -35,6 +35,9 @@ To be published (Chrome / Microsoft Edge)
 
 
 Version History
+
+3.4
+- Ergänzt: Freund*innenkreisE
 
 3.3
 - Ergänzt: Schweden

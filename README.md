@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v3.0 (03.12.2021)
+v3.3 (04.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -33,6 +33,22 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 
 Version History
+
+3.4
+- Ergänzt: FreundinnenkreiseE
+
+3.3
+- Ergänzt: Schweden
+- Ergänzt: ihre*n
+- Bugfix: Gynäkolog
+
+3.2
+- Ergänzt: Anwälte, Funktionäre, Visionäre, Sekretäre
+- Bugfix: Kosovaren
+
+3.1
+- Ergänzt: Chef*innen => Chefs
+- Ergänzt: Kapitän*innen => Kapitäne
 
 3.0
 - Ergänzt: Kommilitonen, Zeugen, Kosovare
