@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v3.4
+// v3.5
 // License: GPL v3.3
 
 
@@ -174,15 +174,15 @@ function removeGender(sollrot) {
 	  // Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch en ersetzt
 	  // wenn ein Vorsatzwort den Dativ vorgibt
 	  // Beispiel: Ingenieur:innen => Ingenieure, DomteurInnen => Dompteure, Päpst:innen => Päpste
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*?)(eur|pst|bst|hund|dar|wölf)(\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/gi,rot1+"$1$2 $3$4en$7"+rot2);
-	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*?)(eur|pst|bst|hund|Hund|dar|Wölf|wölf)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2 $3$4en$6"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*?)(eur|pst|bst|hund|Hund|dar|wölf|Wölf|pitän|tär|när|wält|dät)(\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/gi,rot1+"$1$2 $3$4en$7"+rot2);
+	  str = str.replace(/(den|von|mit|auf|unter|einen|chen|ten|len|che|ren|vor|zu|igen|aus)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) ([A-Za-züöäÖÜÄß]*?)(eur|pst|bst|hund|Hund|dar|wölf|Wölf|pitän|tär|när|wält|dät)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2 $3$4en$6"+rot2);
 
 
 
 	  // Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch e ersetzt
 	  // Beispiel: Ingenieur:innen => Ingenieure, DomteurInnen => Dompteure, Päpst:innen => Päpste
-	  str = str.replace(/(eur|pst|bst|hund|Hund|dar|wölf|Wölf|pitän|tär|när|wält)(\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1e$4"+rot2);
-	  str = str.replace(/([a-züöäß])(eur|pst|bst|hund|Hund|dar|wölf|Wölf|pitän|tär|när|wält)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2e$4"+rot2);
+	  str = str.replace(/(eur|pst|bst|hund|Hund|dar|wölf|Wölf|pitän|tär|när|wält|dät)(\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1e$4"+rot2);
+	  str = str.replace(/([a-züöäß])(eur|pst|bst|hund|Hund|dar|wölf|Wölf|pitän|tär|när|wält|dät)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2e$4"+rot2);
 	  
 	  // Anglizismen, männlicher Plural mit "s" (Chef:innen => Chefs)
 	  str = str.replace(/(chef|Chef)(\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1s$4"+rot2);
@@ -214,8 +214,8 @@ function removeGender(sollrot) {
 	  
 	  // Bei Nomen, die auf -or, -ist, -leg, -nom, -iech usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1en$3"+rot2);
-	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
+	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1en$3"+rot2);
+	  str = str.replace(/([a-zA-ZüöäÜÖÄß])(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2en$4"+rot2);
 	  
 	  // Spezialfall Ir*innen
 	  str = str.replace(/ Ir(\:|\*|\/\-|\_|)(innen|Innen)([ ,).:“\?"!\--]|$)/g,rot1+" Iren$3"+rot2);

@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v3.4 (04.12.2021)
+v3.5 (05.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -35,6 +35,10 @@ To be published (Chrome / Microsoft Edge)
 
 
 Version History
+
+3.5
+- Ergänzt: Geodäte, Architekten
+- Bugfix: Dativkonstrukte mit pitän|tär|när|wält|dät
 
 3.4
 - Ergänzt: Freund*innenkreisE
