@@ -2,10 +2,11 @@
 Remove German Gender Language
 -----------------------------
 
-v2.8 (xx.06.2021)
+v3.3 (04.12.2021)
+
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
-Kleines Add-On für den Microsoft Edge Chromium.
+Kleines Add-On für den Firefox.
 Lizenz: GNU GENERAL PUBLIC LICENSE Version 3
 
 Das Add-On entfernt folgendes:
@@ -28,10 +29,35 @@ In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt 
 - In der Konsole (F12) lassen sich alle Änderungen im Detail nachvollziehen (Tipp: Filtern nach rggl).
 
 Installation:
-https://microsoftedge.microsoft.com/addons/
+https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/ (Firefox)
+To be published (Chrome / Microsoft Edge)
 
 
 Version History
+
+3.3
+- Ergänzt: Schweden
+- Ergänzt: ihre*n
+- Bugfix: Gynäkolog
+
+3.2
+- Ergänzt: Anwälte, Funktionäre, Visionäre, Sekretäre
+- Bugfix: Kosovaren
+
+3.1
+- Ergänzt: Chef*innen => Chefs
+- Ergänzt: Kapitän*innen => Kapitäne
+
+3.0
+- Ergänzt: Kommilitonen, Zeugen, Kosovare
+- Bugfix: Satzzeichen '?' verhinderte Korrektur
+- Bugfix: erzählen Berufsanfänger
+- Bugfix: Juden:Jüdinnen wurde zu Jüdinnen - versehentlich generisches Femininum benutzt ;)
+
+2.9
+- Ergänzt: Jüd*innen, Griech*innen
+- Bugfix: Satzzeichen 'Doppelpunkt' verhinderte Korrektur
+- Kompatibilität maximiert / weniger obtrusiv (Text-Nodes anstatt innerHTML)
 
 2.8
 - Ergänzt: Nomaden

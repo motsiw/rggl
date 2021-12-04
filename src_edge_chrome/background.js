@@ -1,6 +1,6 @@
 // Remove German Gender Language
-// v2.8
-// License: GPL 3.0
+// v3.3
+// License: GPL 3.2
 
 var settings = "";
 
@@ -24,6 +24,8 @@ function zeigeZahl(request, sender, sendResponse) {
             text: "" + displayednumber + "",
             tabId: sender.tab.id
         });
+		chrome.browserAction.setBadgeBackgroundColor({'color': 'darkslategray'});
+		//chrome.browserAction.setBadgeTextColor({'color': 'white'});
 }
 
 function updateIcon() {
