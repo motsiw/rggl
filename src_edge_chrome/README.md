@@ -6,7 +6,7 @@ v3.3 (04.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
-Kleines Add-On für den Firefox.
+Kleines Add-On für den Chrome / Microsoft Edge.
 Lizenz: GNU GENERAL PUBLIC LICENSE Version 3
 
 Das Add-On entfernt folgendes:
@@ -30,6 +30,7 @@ In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt 
 
 Installation:
 https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/ (Firefox)
+
 To be published (Chrome / Microsoft Edge)
 
 
