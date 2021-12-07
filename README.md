@@ -37,6 +37,8 @@ Version History
 3.5
 - Ergänzt: Geodäte, Architekten
 - Bugfix: Dativkonstrukte mit pitän|tär|när|wält|dät
+- Bugfix: den Muslime
+- Code cleanup
 
 3.4
 - Ergänzt: FreundinnenkreiseE
