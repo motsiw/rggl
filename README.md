@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v3.5 (07.12.2021)
+v3.9 (08.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -33,6 +33,23 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 
 Version History
+
+
+3.9
+- Ergänzt: Russ*innen
+- Ergänzt: Köch*innen
+- 
+
+3.8
+- Bugfix "machen Schülern"
+- Ergänzt: Abgeordnete*r
+
+3.7
+- Dativ und Akkusativ singular ergänzt
+- diverse Korrekturen
+
+3.6
+- Bugfix: Dativ Plural mit r am Ende und -en (Autor*innen => Autoren)
 
 3.5
 - Ergänzt: Geodäte, Architekten, Asiaten
