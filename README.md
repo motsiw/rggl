@@ -2,7 +2,7 @@
 Remove German Gender Language
 -----------------------------
 
-v3.9 (08.12.2021)
+v4.0 (14.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -34,6 +34,8 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 Version History
 
+4.0
+- Ergänzt: Erwachsene*r
 
 3.9
 - Ergänzt: Russ*innen

@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v3.9
+// v4.0
 // License: GPL v3.3
 
 
@@ -240,8 +240,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/(amt|ndt)(\:|\*|\/\-|\_)(in)([ ,).:“\?"!\--]|$)/gi,rot1+"$1er$4"+rot2);
 	  str = str.replace(/([a-züöäß])(amt|ndt)(In)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2er$4"+rot2); 
 
-	   // und hier die Einzahl für Abgeordnete*r
-	  str = str.replace(/(dnete)(\:|\*|\/\-|\_)(r)([ ,).:“\?"!\--]|$)/gi,rot1+"$1r$4"+rot2);
+	   // und hier die Einzahl für Abgeordnete*r, Erwachsene*r
+	  str = str.replace(/(dnete|wachsene)(\:|\*|\/\-|\_)(r)([ ,).:“\?"!\--]|$)/gi,rot1+"$1r$4"+rot2);
 
 
 	  // In alle übrigen Fällen wird das *innen schlicht entfernt
