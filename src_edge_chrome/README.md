@@ -2,11 +2,11 @@
 Remove German Gender Language
 -----------------------------
 
-v3.5 (05.12.2021)
+v4.0 (14.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
-Kleines Add-On für den Chrome / Microsoft Edge.
+Kleines Add-On für den Google Chrome / Microsoft Edge.
 Lizenz: GNU GENERAL PUBLIC LICENSE Version 3
 
 Das Add-On entfernt folgendes:
@@ -29,19 +29,38 @@ In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt 
 - In der Konsole (F12) lassen sich alle Änderungen im Detail nachvollziehen (Tipp: Filtern nach rggl).
 
 Installation:
-https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/ (Firefox)
-
-To be published (Chrome / Microsoft Edge)
+...
 
 
 Version History
 
+4.0
+- Ergänzt: Erwachsene*r
+
+3.9
+- Ergänzt: Russ*innen
+- Ergänzt: Köch*innen
+- 
+
+3.8
+- Bugfix "machen Schülern"
+- Ergänzt: Abgeordnete*r
+
+3.7
+- Dativ und Akkusativ singular ergänzt
+- diverse Korrekturen
+
+3.6
+- Bugfix: Dativ Plural mit r am Ende und -en (Autor*innen => Autoren)
+
 3.5
-- Ergänzt: Geodäte, Architekten
+- Ergänzt: Geodäte, Architekten, Asiaten
 - Bugfix: Dativkonstrukte mit pitän|tär|när|wält|dät
+- Bugfix: den Muslime
+- massiver Code cleanup
 
 3.4
-- Ergänzt: Freund*innenkreisE
+- Ergänzt: FreundinnenkreiseE
 
 3.3
 - Ergänzt: Schweden
