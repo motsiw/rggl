@@ -1,8 +1,8 @@
 
-Remove German Gender Language
------------------------------
+Remove German Gender Language (RGGL)
+------------------------------------
 
-v4.3 (16.12.2021)
+v4.4 (18.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -18,7 +18,6 @@ Das Add-On entfernt folgendes:
 * Klammerlösung (Anwender(innen))
 
 Viele Spezialfälle werden berücksichtigt. Dadurch werden deutschsprachige Webseiten besser lesbar dargestellt. 
-Das gilt auch für Zeitungs-Webseiten wie heise, taz, Die Zeit, Frankfurter Rundschau usw.
 
 Bedienung:
 In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt die Farbe beim Klicken.
@@ -28,14 +27,54 @@ In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt 
 - Der Knopf zeigt die Zahl der geänderten Elemente auf der aktuellen Webseite.
 - In der Konsole (F12) lassen sich alle Änderungen im Detail nachvollziehen (Tipp: Filtern nach rggl).
 
+
 Installation:
 https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 
+Warum dieses Add-On?
+
+Einige deutschsprachige Medien haben sich für die Freigabe des sogenannten 'Genderns' unter ihren Autoren und Redakteuren entschieden. So haben Leser, die sich ein möglichst umfassendes Meinungsbild der Medienlandschaft verschaffen möchten, keine Chance mehr dem zu entgehen, es sei denn man beschränkt sich auf konservative und Boulevard-Zeitungen.
+
+Die Intensität des Genderns ist überall autorenabhängig. Das drastischste Beispiel auf dem deutschen Medienmarkt finden Sie im 'ze.tt Magazin', eine Rubrik der 'Zeit' Wochenzeitung. Verzichtbar? Mag sein, da es sich bei 'ze.tt' um eine Filterblase handelt, wo in der Mehrzahl der Beiträge Minderheiten anderen Minderheiten ihr Leid klagen, ohne Lösungsansätze zu vermitteln. Spätestens bei 'taz' und 'tagesspiegel' jedoch ist das anders, dort fällt das Ignorieren genauso schwer wie das Lesen.
+
+Wenn Sie wertvolle Informationen und Meinungen nicht ignorieren wollen, gleichzeitig aber das sog. 'Gendern' als grobe Verunglimpfung der deutschen Sprache empfinden, dann verwenden Sie  dieses Add-On. Artikel werden lesbarer und inhaltlich deutlicher. Mehr als 95% der Korrekturen erfolgen grammatikalisch korrekt. In den übrigen Fällen sind die Änderungen weniger obtrusiv als die vormalige 'Gender'-Konstruktion (meist erfolgt eine irrtümliche Verschiebung vom Dativ zum Akkusativ).
+
+
+Funktionsweise
+
+Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
+1. Ersatz von Dem/der, er:sie, man*frau usw. durch das generische Maskulinum.
+2. Singular: Lautverschiebung bei bestimmten Nomen (Bäuer*in => Bauer, Schwäger*in => Schwager).
+3. Korrektur Nomen auf -erin/-erer (Veräußer*in => Veräußerer)
+4. Korrektur Artikel und Fürwörter (ein*e => ein, jede*r => jeder)
+5. Plural mit Binnen-'innen' (Freund*innenkreise => Freundeskreise)
+6. Gruppen-N im Nominativ mit einigen Nomen (die Beamt*innen => die Beamten)
+7. Anglizismen (Chef*innen => Chefs)
+8. Dativ auf 'en' bei Wörtern, die nicht auf 'r' enden (den Therapeut*innen => den Therapeuten)
+9. Dativ Spezialfälle auf 'en' bei Wörtern, die auf 'r' enden (den Autor*innen => den Autoren)
+10. Akkusativ mit 'auf' bei Nomen, die auf 'r' enden (Angriffe auf Arbeiter*innen => Angriffe auf Arbeiter)
+10. Dativ auf 'n' bei den übrigen Wörtern, die auf 'r' enden (den Arbeiter*innen => den Arbeitern)
+11. Genitiv plural auf 'e' bei Nomen, die auf -eur,-pst,-bst,-pitän usw. enden (der Päpst*innen => der Päpste)
+12. Genitiv plural auf 'en' bei übrigen Nomen (der Finn*innen => der Finnen)
+13. Nominativ/Akkusativ plural auf 'e' bei Nomen auf -eur,-wält usw. (die Anwält*innen => die Anwälte)
+14. Nominativ/Akkusativ plural auf 'en' bei Nomen auf -nom,-ürk usw. (die Türk*innen => die Türken)
+15. Dativ/Akkusativ singular auf 'en' bei Nomen auf -log,-pert usw. (dem*der Astrolog*in => dem Astrologen)
+16. Einzahl auf 'e' bei Nomen auf -gog,-log,-oss usw. (Genoss*in => Genosse)
+17. Einzahl auf 'er' bei Nomen auf -amt,-ndt (Beamt*in => Beamter)
+18. Einzahl auf 'r' bei Nomen auf -dnete,-wachsene (Erwachsene*r => Erwachsener)
+19. Alle verbleibenden *innen und *in entfernen.
+20. Korrekturen für unregelmäßige Formen (Israel*innen => Israelis, Juden/Jüdinnen => Juden)
+
+
+
 Version History
 
+4.4
+- Dokumentation / Readme überarbeitet
+
 4.3
-- Bugfix
+- Bugfix 'für'+Dativ
 
 4.2
 - Ergänzt: Kund*innen
