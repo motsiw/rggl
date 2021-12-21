@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v4.7 (21.12.2021)
+v4.8 (22.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -69,6 +69,9 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+4.8
+- Ergänzt: Konfirmand*innen
 
 4.7
 - Bugfix: Nomen auf -erer im Genitiv Plural
