@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v4.4
+// v4.7
 // License: GPL v3.3
 
 
@@ -15,7 +15,6 @@ function removeGender(sollrot) {
 	console.time('RGGL');
 	
 	var result = [];
-	var resultred = [];
 	var checkme = '';
 	var n;
 
@@ -93,38 +92,39 @@ function removeGender(sollrot) {
 
 
 	  // Spezialfälle mit Umlauten je nach Geschlecht lösen
-	  str = str.replace(/(b|B)äuer(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1auer$2");
-	  str = str.replace(/(n|N)ärr(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1arr$2");
-	  str = str.replace(/(h|H)ünd(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1und$2");
-	  str = str.replace(/(k|K)ätz(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1atz$2");
-	  str = str.replace(/(f|F)ranzös(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1ranzos$2");
-	  str = str.replace(/(p|P)rinzess(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1rinz$2");
-	  str = str.replace(/(i|I)srael(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1sraelis$2");
-	  str = str.replace(/(g|G)räf(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1raf$2");
-	  str = str.replace(/(s|S)chwäger(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1chwager$2");
-	  str = str.replace(/(w|W)estfäl(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1estfal$2");
-	  str = str.replace(/(s|S)chwän(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1chwan$2");
+	  str = str.replace(/(b|B)äuer(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1auer$2");
+	  str = str.replace(/(n|N)ärr(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1arr$2");
+	  str = str.replace(/(h|H)ünd(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1und$2");
+	  str = str.replace(/(k|K)ätz(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1atz$2");
+	  str = str.replace(/(f|F)ranzös(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1ranzos$2");
+	  str = str.replace(/(p|P)rinzess(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1rinz$2");
+	  str = str.replace(/(i|I)srael(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1sraelis$2");
+	  str = str.replace(/(g|G)räf(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1raf$2");
+	  str = str.replace(/(s|S)chwäger(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1chwager$2");
+	  str = str.replace(/(w|W)estfäl(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1estfal$2");
+	  str = str.replace(/(s|S)chwän(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1chwan$2");
 	  str = str.replace(/(k|K)öch(\:in|\*in|\/\-in|\_in|\(in|In)([ ,).:“\?"!\--]|$)/g,"$1och$2$3");
 	  
 	  
 	  
 	  // Spezialfälle: Wörter, die auf -erer/-erin enden
-	  str = str.replace(/(w|W)ander(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1anderer$2");
-	  str = str.replace(/(f|F)örder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1örderer$2");
-	  str = str.replace(/(e|E)rober(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1roberer$2");
-	  str = str.replace(/(l|L)äster(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$1ästerer$2");
-	  str = str.replace(/(r|R)uder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$uderer$2");
-	  str = str.replace(/(s|S)chlender(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$chlenderer$2");
-	  str = str.replace(/(w|W)ilder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$ilderer$2");
-	  str = str.replace(/(k|K)letter(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$letterer$2");
-	  str = str.replace(/(z|Z)auber(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$auberer$2");
-	  str = str.replace(/(p|P)lünder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$lünderer$2");
-	  str = str.replace(/(b|B)ewunder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$ewunderer$2");
-	  str = str.replace(/(h|H)erausforder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$erausforderer$2");
-	  str = str.replace(/(h|H)inder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$inderer$2");
-	  str = str.replace(/(p|P)lauder(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$lauderer$2");
-	  str = str.replace(/(m|M)euter(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$euterer$2");
-	  str = str.replace(/(v|V)eräußer(\:in|\*in|\/\-in|\_in|\(in|In)/g,"$eräußerer$2");
+	  str = str.replace(/(w|W)ander(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1anderer$2");
+	  str = str.replace(/(f|F)örder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1örderer$2");
+	  str = str.replace(/(e|E)rober(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1roberer$2");
+	  str = str.replace(/(l|L)äster(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1ästerer$2");
+	  str = str.replace(/(r|R)uder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1uderer$2");
+	  str = str.replace(/(s|S)chlender(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1chlenderer$2");
+	  str = str.replace(/(w|W)ilder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1ilderer$2");
+	  str = str.replace(/(k|K)letter(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$letterer$2");
+	  str = str.replace(/(z|Z)auber(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1auberer$2");
+	  str = str.replace(/(p|P)lünder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$lünderer$2");
+	  str = str.replace(/(b|B)ewunder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1ewunderer$2");
+	  str = str.replace(/(h|H)erausforder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1erausforderer$2");
+	  str = str.replace(/(h|H)inder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1inderer$2");
+	  str = str.replace(/(p|P)lauder(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$lauderer$2");
+	  str = str.replace(/(m|M)euter(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1euterer$2");
+	  str = str.replace(/(v|V)eräußer(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1eräußerer$2");
+	  str = str.replace(/(f|F)ütter(\:in|\*in|\/\-in|\_in|\(in|In\))/g,"$1ütterer$2");
 	  
 	  
 	  // Zeuge
@@ -133,13 +133,11 @@ function removeGender(sollrot) {
 	  //str = str.replace(/(e|E|me|Me)in(\:e |\*e |\/\-e |\_e |\(e\))/g,rot1+"$1in "+rot2);
 	  
 	  // aus ein(e) wird ein, aus Liebe:r wird Lieber, zusammen mit Nomen:
-	  //str = str.replace(/(ein|Ein)(\:e|\/\-e|\*e|\_e|\(e\)) (.*?)(\:in|\*in|\_in|\/\-in|\(in\))([ ,).:“\?"!\--]|$)/g,rot1+"$1 $3$5"+rot2);
-	  str = str.replace(/(eine|Eine)(\:n|\/\-n|\*n|\_n|\(n\))([ ,).:“\?"!\--]|$)/g,rot1+"$1n$3"+rot2);
-	  //str = str.replace(/(jede|liebe|Jede|Liebe|geehrte|Geehrte)(\:r|\/\-r|\*r|\_r|\(r\)) (.*?)(\:in|\*in|\_in|\/\-in|\(in\))([ ,).:“\?"!\--]|$)/g,rot1+"$1r $3$5"+rot2);
-	  str = str.replace(/(ein|Ein)(\:e|\/\-e|\*e|\_e|\(e\))([ ,).:“\?"!\--]|$)/g,rot1+"$1$3"+rot2);
+	  str = str.replace(/(eine|Eine)(\:n|\/\-n|\*n|\_n|\(n\))([ ,).:“\?"!\--]|$)/g,"$1n$3");
+	  str = str.replace(/(ein|Ein)(\:e|\/\-e|\*e|\_e|\(e\))([ ,).:“\?"!\--]|$)/g,"$1$3");
 	  
 	  // freistehende jede(r), jede_r, manche(r)
-	  str = str.replace(/(jede|Jede|manche|Manche|keine|Keine|eine|Eine|einzelne|Einzelne|einzige|Einzige|eigene|Eigene)(\:r|\/\-r|\*r|\_r|\(r\))([ ,).:“\?"!\--]|$)/g,rot1+"$1r$3"+rot2);
+	  str = str.replace(/(jede|Jede|manche|Manche|keine|Keine|eine|Eine|einzelne|Einzelne|einzige|Einzige|eigene|Eigene)(\:r|\/\-r|\*r|\_r|\(r\))([ ,).:“\?"!\--]|$)/g,rot1+"$1r"+rot2+"$3");
 	  
 	  // frau
 	  str = str.replace(/ frau([ ,).:“\?"!\--]|$)/g,rot1+" man$1"+rot2);
@@ -214,12 +212,12 @@ function removeGender(sollrot) {
 	  str = str.replace(/([a-zA-ZüöäßÜÖÄ]*?r)(Innen) zufolge([ ,).:“\?"!\--]|$)/g,rot1+"$1n zufolge$3"+rot2);
 
 	  // Dasselbe für den Genitiv bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch e ersetzt
-	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?)(eur|pst|bst|und|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|rzt)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1$2 $3$4e$6"+rot2);
-	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?)(eur|pst|bst|und|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|rzt)Innen([ ,).:“\?"!\--]|$)/g,rot1+"$1$2 $3$4e$5"+rot2);
+	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?)(eur|pst|bst|und|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|rzt)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,"$1"+rot1+"$2 $3$4e$6"+rot2);
+	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?)(eur|pst|bst|und|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|rzt)Innen([ ,).:“\?"!\--]|$)/g,"$1"+rot1+"$2 $3$4e$5"+rot2);
  
 	  // Dasselbe für den Genitiv bei den übrigen Nomen
-	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1$2 $3en$5"+rot2);
-	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])Innen([ ,).:“\?"!\--]|$)/g,rot1+"$1$2 $3en$4"+rot2);
+	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,"$1"+rot1+"$2 $3en$5"+rot2);
+	  str = str.replace(/( der|ner|nger|rer)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ]*?[bcdfghjklmnpqstvwxz])Innen([ ,).:“\?"!\--]|$)/g,"$1"+rot1+"$2 $3en$4"+rot2);
 
 
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch e ersetzt
@@ -229,8 +227,8 @@ function removeGender(sollrot) {
 	  
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -or, -ist, -leg, -nom, -iech usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|kund)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1en$3"+rot2);
-	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1en$3"+rot2);
+	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|kund|soph)(\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1en$3"+rot2);
+	  str = str.replace(/(or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund|soph)(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1en$3"+rot2);
 
 
 	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in

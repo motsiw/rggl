@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v4.4 (18.12.2021)
+v4.7 (21.12.2021)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -69,6 +69,16 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+4.7
+- Bugfix: Nomen auf -erer im Genitiv Plural
+- Ergänzt: -sophen (Philosophen, Antroposophen usw.)
+
+4.6
+- Bugfix: Nomen auf -erer im Modus 'Änderungen hervorheben'
+
+4.5
+- Ergänzt: Fütter*in => Fütterer
 
 4.4
 - Dokumentation / Readme überarbeitet
