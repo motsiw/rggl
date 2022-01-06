@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v4.9 (06.01.2022)
+v5.0 (06.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -69,6 +69,9 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.0
+- Ergänzt: Katholik*innen
 
 4.9
 - Ergänzt: Erb:innen
