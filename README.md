@@ -72,6 +72,7 @@ Version History
 
 5.0
 - Ergänzt: Katholik*innen
+- Trennzeichen · (Mittel-/Hochpunkt) ergänzt
 
 4.9
 - Ergänzt: Erb:innen
