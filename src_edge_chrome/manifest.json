@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Remove German Gender Language",
-  "version": "4.0",
+  "version": "5.0",
   "description": "Entfernt deutsche Gender-Sprache weitgehend aus Webseiten.",
   
   "icons": {
@@ -21,7 +21,7 @@
 
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://*/*","http://*/*"],
       "js": ["removegenderlang.js"],
 	  "run_at": "document_end"
     }
