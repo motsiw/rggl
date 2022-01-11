@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.0 (06.01.2022)
+v5.1 (11.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -34,9 +34,7 @@ https://addons.mozilla.org/de/firefox/addon/remove-german-gender-language/
 
 Warum dieses Add-On?
 
-Einige deutschsprachige Medien haben sich für die Freigabe des sogenannten 'Genderns' unter ihren Autoren und Redakteuren entschieden. So haben Leser, die sich ein möglichst umfassendes Meinungsbild der Medienlandschaft verschaffen möchten, keine Chance mehr dem zu entgehen, es sei denn man beschränkt sich auf konservative und Boulevard-Zeitungen.
-
-Die Intensität des Genderns ist überall autorenabhängig. Das drastischste Beispiel auf dem deutschen Medienmarkt finden Sie im 'ze.tt Magazin', eine Rubrik der 'Zeit' Wochenzeitung. Verzichtbar? Mag sein, da es sich bei 'ze.tt' um eine Filterblase handelt, wo in der Mehrzahl der Beiträge Minderheiten anderen Minderheiten ihr Leid klagen, ohne Lösungsansätze zu vermitteln. Spätestens bei 'taz' und 'tagesspiegel' jedoch ist das anders, dort fällt das Ignorieren genauso schwer wie das Lesen.
+Einige deutschsprachige Medien haben sich für die Freigabe des sogenannten 'Genderns' unter ihren Autoren und Redakteuren entschieden. So haben Leser, die sich ein möglichst umfassendes Meinungsbild der Medienlandschaft verschaffen möchten, keine Chance mehr dem zu entgehen, es sei denn man beschränkt sich auf konservative und Boulevard-Zeitungen. Die Intensität des Genderns ist überall autorenabhängig.
 
 Wenn Sie wertvolle Informationen und Meinungen nicht ignorieren wollen, gleichzeitig aber das sog. 'Gendern' als grobe Verunglimpfung der deutschen Sprache empfinden, dann verwenden Sie  dieses Add-On. Artikel werden lesbarer und inhaltlich deutlicher. Mehr als 95% der Korrekturen erfolgen grammatikalisch korrekt. In den übrigen Fällen sind die Änderungen weniger obtrusiv als die vormalige 'Gender'-Konstruktion (meist erfolgt eine irrtümliche Verschiebung vom Dativ zum Akkusativ).
 
@@ -69,6 +67,10 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.1
+- Ergänzt: seinem*ihrem
+- Ungenutzte Berechtigungsanforderungen entfernt
 
 5.0
 - Ergänzt: Katholik*innen

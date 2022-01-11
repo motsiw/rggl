@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v5.0
+// v5.2
 // License: GPL v3.3
 
 
@@ -83,6 +83,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/sie(\/|\_|\:|\*|\·)er([ ,).:“\?"!-]|$)/g,rot1+"er$2"+rot2);
 	  str = str.replace(/Sie(\/|\_|\:|\*|\·)er([ ,).:“\?"!-]|$)/g,rot1+"Er$2"+rot2);
 	  str = str.replace(/(d|D)em(\/|\_|\:|\*|\·)der([ ,).:“\?"!-]|$)/g,rot1+"$1em$3"+rot2);
+	  str = str.replace(/(s|S)einem(\/|\_|\:|\*|\·)ihrem([ ,).:“\?"!-]|$)/g,rot1+"$1einem$3"+rot2);
+	  str = str.replace(/ihrem(\/|\_|\:|\*|\·)seinem([ ,).:“\?"!-]|$)/g,rot1+"seinem$2"+rot2);
 	  str = str.replace(/(d|D)er(\/|\_|\:|\*|\·)dem([ ,).:“\?"!-])/g,rot1+"$1em$3"+rot2); 
 	  str = str.replace(/(e|E)in(\/|\_|\:|\*|\·)eine([ ,).:“\?"!-]|$)/g,rot1+"$1in$3"+rot2);
 	  str = str.replace(/(e|E)ine(\/|\_|\:|\*|\·)ein([ ,).:“\?"!-])/g,rot1+"$1in$3"+rot2); 
