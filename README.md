@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.1 (11.01.2022)
+v5.2 (16.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -67,6 +67,10 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.2
+- Ergänzt: Tatar*innen, Athlet*innen, Vietnames*innen, Veteran*innen
+
 
 5.1
 - Ergänzt: seinem*ihrem
