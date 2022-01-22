@@ -1,11 +1,24 @@
 // Remove German Gender Language
-// v5.4
+// v5.5
 // License: GPL v3.3
 
 
 // Einstellungen laden
 browser.storage.local.get(function(settings) {
-  if (settings.aktiv) removeGender(settings.aktiv);
+  
+  	var docxmllang = document.getElementsByTagName('html')[0].getAttribute('xml:lang');
+	var doclang = document.getElementsByTagName('html')[0].getAttribute('lang');
+	var metalang = document.querySelectorAll('meta[content="de"]');
+
+	if (docxmllang == 'de' || doclang == 'de' || metalang.length > 0)
+	{
+		console.log("RGGL - Deutschsprachige Webseite erkannt");
+		if (settings.aktiv) removeGender(settings.aktiv);
+	}
+	else
+	{
+		console.log("RGGL - Deaktiviert. docxmllang="+docxmllang+", doclang="+doclang+", kein Meta-Tag 'de'.");
+	}
 });
 
 
@@ -13,6 +26,7 @@ function removeGender(sollrot) {
 
 	// Zeitnahme der Abarbeitung starten
 	console.time('RGGL');
+	
 	
 	var result = [];
 	var checkme = '';
