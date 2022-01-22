@@ -24,7 +24,7 @@ In der Symbolleiste des Firefox erscheint ein neuer "Gender"-Knopf. Er wechselt 
 - schwarz: Gender-Konstruktionen werden gefiltert
 - rot: Gender-Konstruktionmen werden gefiltert und die Änderungen farbig markiert
 - x: Deaktiviert
-- Der Knopf zeigt die Zahl der geänderten Elemente auf der aktuellen Webseite.
+- Der Knopf zeigt die Zahl der geänderten Elemente auf der aktuellen Webseite. Auf Webseiten, die nicht auf Deutsch sind, wird '-' angezeigt.
 - In der Konsole (F12) lassen sich alle Änderungen im Detail nachvollziehen (Tipp: Filtern nach rggl).
 
 
