@@ -9,8 +9,9 @@ browser.storage.local.get(function(settings) {
   	var docxmllang = document.getElementsByTagName('html')[0].getAttribute('xml:lang');
 	var doclang = document.getElementsByTagName('html')[0].getAttribute('lang');
 	var metalang = document.querySelectorAll('meta[content="de"]');
+	var metalang2 = document.querySelectorAll('meta[content="de-de"]');
 
-	if (docxmllang == 'de' || doclang == 'de' || metalang.length > 0)
+	if (docxmllang == 'de' || doclang == 'de' || metalang.length > 0 || metalang2.length > 0)
 	{
 		console.log("RGGL - Deutschsprachige Webseite erkannt");
 		if (settings.aktiv) removeGender(settings.aktiv);
