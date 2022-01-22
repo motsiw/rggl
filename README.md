@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.3 (18.01.2022)
+v5.4 (22.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -67,6 +67,9 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.4
+- Ergänzt: Akkusativ mit auf (Druck auf Politiker*innen)
 
 5.3
 - Korrektur: Ärzt*innen, Prinzess*innen, Närr*innen, ChefIn
