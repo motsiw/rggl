@@ -69,7 +69,8 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 5.4
-- Ergänzt: Akkusativ mit auf (Druck auf Politiker*innen)
+- Ergänzt: Akkusative mit auf (Druck auf Politiker*innen, Wirkung auf Schüler*innen)
+- Modus "Änderungen hervorheben": Viele farbige Leerzeichen beseitigt
 
 5.3
 - Korrektur: Ärzt*innen, Prinzess*innen, Närr*innen, ChefIn
