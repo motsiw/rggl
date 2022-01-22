@@ -8,17 +8,27 @@ chrome.storage.local.get(function(settings) {
   
   	var docxmllang = document.getElementsByTagName('html')[0].getAttribute('xml:lang');
 	var doclang = document.getElementsByTagName('html')[0].getAttribute('lang');
+	doclang = String(doclang).toLowerCase()+String(docxmllang).toLowerCase();
 	var metalang = document.querySelectorAll('meta[content="de"]');
+	var metalang1 = document.querySelectorAll('meta[content="DE"]');
 	var metalang2 = document.querySelectorAll('meta[content="de-de"]');
-
-	if (docxmllang == 'de' || doclang == 'de' || metalang.length > 0 || metalang2.length > 0)
+	var metalang3 = document.querySelectorAll('meta[content="de-at"]');
+	var metalang4 = document.querySelectorAll('meta[content="de-DE"]');
+	var metalang5 = document.querySelectorAll('meta[content="de-AT"]');
+	var metalang6 = document.querySelectorAll('meta[content="de-CH"]');
+	var metalang7 = document.querySelectorAll('meta[content="de-ch"]');
+	if (doclang.indexOf("de") != -1 || doclang.indexOf("at") != -1  || doclang.indexOf("ch") != -1 || metalang.length > 0 || metalang1.length > 0 || metalang2.length > 0 || metalang3.length > 0 || metalang4.length > 0 || metalang5.length > 0 || metalang6.length > 0 || metalang7.length > 0)
 	{
-		console.log("RGGL - Deutschsprachige Webseite erkannt");
+		console.log("RGGL - Deutschsprachige Webseite erkannt.");
 		if (settings.aktiv) removeGender(settings.aktiv);
 	}
 	else
 	{
-		console.log("RGGL - Deaktiviert. docxmllang="+docxmllang+", doclang="+doclang+", kein Meta-Tag 'de'.");
+		console.log("RGGL - Webseite nicht als deutschsprachig erkannt.");
+		chrome.runtime.sendMessage({
+			count: '-',
+			type: "count"
+		});
 	}
 });
 
