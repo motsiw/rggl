@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.5 (22.01.2022)
+v5.6 (23.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -67,6 +67,9 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.6
+- Ergänzt: Kommissar*innen
 
 5.5
 - Das Add-On wird nur noch auf deutschsprachigen Webseiten aktiv.
