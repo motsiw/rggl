@@ -68,7 +68,7 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 5.7
-Komposita werden jetzt ebenfalls behandelt:
+- Komposita werden jetzt ebenfalls behandelt:
 - ArbeitgeberInnengremium, Kolleg*innenkreis, Ärzt*innenbund, Minister_innenriege
 
 5.6
