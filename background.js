@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v5.7
+// v5.8
 // License: GPL 3.2
 
 var settings = "";
