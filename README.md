@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.6 (23.01.2022)
+v5.7 (25.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -47,11 +47,10 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 3. Korrektur Nomen auf -erin/-erer (Veräußer*in => Veräußerer)
 4. Korrektur Artikel und Fürwörter (ein*e => ein, jede*r => jeder)
 5. Plural mit Binnen-'innen' (Freund*innenkreise => Freundeskreise)
-6. Gruppen-N im Nominativ mit einigen Nomen (die Beamt*innen => die Beamten)
-7. Anglizismen (Chef*innen => Chefs)
-8. Dativ auf 'en' bei Wörtern, die nicht auf 'r' enden (den Therapeut*innen => den Therapeuten)
-9. Dativ Spezialfälle auf 'en' bei Wörtern, die auf 'r' enden (den Autor*innen => den Autoren)
-10. Akkusativ mit 'auf' bei Nomen, die auf 'r' enden (Angriffe auf Arbeiter*innen => Angriffe auf Arbeiter)
+6. Gruppen-N im Nominativ mit einigen Nomen (die Beamt*innen => die Beamten). Anglizismen (Chef*innen => Chefs)
+7. Dativ auf 'en' bei Wörtern, die nicht auf 'r' enden (den Therapeut*innen => den Therapeuten)
+8. Dativ Spezialfälle auf 'en' bei Wörtern, die auf 'r' enden (den Autor*innen => den Autoren)
+9. Akkusativ mit 'auf' bei Nomen, die auf 'r' enden (Angriffe auf Arbeiter*innen => Angriffe auf Arbeiter)
 10. Dativ auf 'n' bei den übrigen Wörtern, die auf 'r' enden (den Arbeiter*innen => den Arbeitern)
 11. Genitiv plural auf 'e' bei Nomen, die auf -eur,-pst,-bst,-pitän usw. enden (der Päpst*innen => der Päpste)
 12. Genitiv plural auf 'en' bei übrigen Nomen (der Finn*innen => der Finnen)
@@ -67,6 +66,10 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.7
+Komposita werden jetzt ebenfalls behandelt:
+- ArbeitgeberInnengremium, Kolleg*innenkreis, Ärzt*innenbund, Minister_innenriege
 
 5.6
 - Ergänzt: Kommissar*innen

@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v5.6
+// v5.7
 // License: GPL v3.3
 
 
@@ -189,8 +189,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/([a-züöäß])\(inn\)([a-züöäß]|$)/g,rot1+"$1$2"+rot2);
 	  
 	  // Sonderkonstrukt Staatsbürger:innenschaft
-	  str = str.replace(/([a-züöäß])(\·|\*|\:|\_)innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$3"+rot2+"$4");
-	  str = str.replace(/([a-züöäß])Innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2"+rot2+"$3");
+	  // str = str.replace(/([a-züöäß])(\·|\*|\:|\_)innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$3"+rot2+"$4");
+	  // str = str.replace(/([a-züöäß])Innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2"+rot2+"$3");
 
 	  // Sonderkonstrukt Freun*Innenkreis(e)
 	  str = str.replace(/(freund|Freund)(\·|\*|\:|\_)innen(kreis)(|e)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$3$4"+rot2+"$5");
@@ -204,6 +204,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/(J|j)üd(\·|\:|\*|\/\-|\_)(innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1uden"+rot2+"$4");
 	  str = str.replace(/([A-Za-zÜÖÄüöäß])(J|j)üd(Innen)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2uden"+rot2+"$4");	  
 
+	  // Komposita auflösen
+	  str = str.replace(/([a-zäüöß])(Innen|\*innen|\:innen|\_innen|\·innen)([a-zäüöß])/g,"$1$2 %%%$3");
 
 	  // Gruppen-N im Nominativ mit ganz bestimmten Artikeln (Verwandten, Beamten, Bekannten, Angestellten)
 	  str = str.replace(/(die|ihre|meine|unsere|seine|keine|manche)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend) (Beamt|Verwandt|Bekannt|Angestellt)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\(innen\))([ ,\).:“\?"!\--]|$)/gi,rot1+"$1$2 $3en"+rot2+"$5");
@@ -282,6 +284,9 @@ function removeGender(sollrot) {
 
 	   // und hier die Einzahl für Abgeordnete*r, Erwachsene*r
 	  str = str.replace(/(dnete|wachsene)(\·|\:|\*|\/\-|\_)(r)([ ,).:“\?"!\--]|$)/gi,rot1+"$1r"+rot2+"$4");
+
+	  // Komposita wiederherstellen
+	  str = str.replace(/ \%\%\%([a-zäüöß])/g,"$1");
 
 
 	  // In alle übrigen Fällen wird das *innen schlicht entfernt
