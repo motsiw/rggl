@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.8 (25.01.2022)
+v5.9 (25.01.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -66,6 +66,9 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.9
+- 'über' steht jetzt für den Akkusativ (vormals Dativ)
 
 5.8
 - Ergänzt: Alle Arten von Wirt*innen und Hirt*innen
