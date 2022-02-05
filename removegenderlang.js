@@ -188,10 +188,6 @@ function removeGender(sollrot) {
 	  // geklammertes Binnen-(inn) entfernen
 	  str = str.replace(/([a-züöäß])\(inn\)([a-züöäß]|$)/g,rot1+"$1$2"+rot2);
 	  
-	  // Sonderkonstrukt Staatsbürger:innenschaft
-	  // str = str.replace(/([a-züöäß])(\·|\*|\:|\_)innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$3"+rot2+"$4");
-	  // str = str.replace(/([a-züöäß])Innen(schaft)([ ,).:“\?"!\--]|$)/g,rot1+"$1$2"+rot2+"$3");
-
 	  // Sonderkonstrukt Freun*Innenkreis(e)
 	  str = str.replace(/(freund|Freund)(\·|\*|\:|\_)innen(kreis)(|e)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$3$4"+rot2+"$5");
 	  str = str.replace(/(freund|Freund)Innen(kreis)(|e)([ ,).:“\?"!\--]|$)/g,rot1+"$1es$2$3"+rot2+"$4");
