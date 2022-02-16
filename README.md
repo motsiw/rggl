@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.9.1 (05.02.2022)
+v5.9.3 (16.02.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -67,8 +67,12 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 Version History
 
-5.9.1
+5.9.3
+- Ergänzt: Rekrut*innen
+
+5.9.2
 - Ergänzt: Feind:innen, Kamerad:innen
+- Ergänzt: Uigur*innen
 
 5.9
 - 'über' steht jetzt für den Akkusativ (vormals Dativ)
