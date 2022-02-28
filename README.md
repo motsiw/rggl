@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.9.4 (23.02.2022)
+v5.9.5 (28.02.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -66,6 +66,10 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.9.5
+- Hinzugefügt: 'Falsches' Gendern nur mit Schrägstrich (Teilnehmer/innen)
+- Ergänzt: Sklav:innen
 
 5.9.4
 - Ergänzt: Narzisst*innen
