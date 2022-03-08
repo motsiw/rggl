@@ -70,6 +70,7 @@ Version History
 5.9.9
 - Ergänzt: Ihm*ihr bzw. ihr*ihm
 - Fix: Dativ/Akkusativ Therapeut*in
+- Neuer Algo: neue*r, alte*r, liebende*r etc.
 
 5.9.8
 - Fix: Uigur*innen (Dativ), Chines*innen (Nominativ)
