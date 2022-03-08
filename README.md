@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.9.8 (08.03.2022)
+v5.9.9 (08.03.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -66,6 +66,10 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+5.9.9
+- Ergänzt: Ihm*ihr bzw. ihr*ihm
+- Fix: Dativ/Akkusativ Therapeut*in
 
 5.9.8
 - Fix: Uigur*innen (Dativ), Chines*innen (Nominativ)
