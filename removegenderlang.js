@@ -169,29 +169,29 @@ function removeGender(sollrot) {
 	  
 	  // Partizipien
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Helfenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Helfern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Helfende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Helferin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Helfende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Helferin"+rot2+"$2");
 	  str = str.replace(/Helfenden?([ ,).:“\?"!\--]|$)/g,rot1+"Helfer"+rot2+"$1");
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Mitarbeitenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Mitarbeitern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Mitarbeitende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Mitarbeiterin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Mitarbeitende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Mitarbeiterin"+rot2+"$2");
 	  str = str.replace(/Mitarbeitenden?([ ,).:“\?"!\--]|$)/g,rot1+"Mitarbeiter"+rot2+"$1");
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Pflegenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Pflegern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Pflegende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Pflegerin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Pflegende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Pflegerin"+rot2+"$2");
 	  str = str.replace(/Pflegenden?([ ,).:“\?"!\--]|$)/g,rot1+"Pfleger"+rot2+"$1");
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Forschenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Forschern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Forschende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Forscherin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Forschende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Forscherin"+rot2+"$2");
 	  str = str.replace(/Forschenden?([ ,).:“\?"!\--]|$)/g,rot1+"Forscher"+rot2+"$1");
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Lesenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Lesern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Lesende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Leserin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Lesende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Leserin"+rot2+"$2");
 	  str = str.replace(/Lesenden?([ ,).:“\?"!\--]|$)/g,rot1+"Leser"+rot2+"$1");
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Kritisierenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Kritikern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Kritisierende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Kritikerin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Kritisierende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Kritikerin"+rot2+"$2");
 	  str = str.replace(/Kritisierenden?([ ,).:“\?"!\--]|$)/g,rot1+"Kritiker"+rot2+"$1");
 	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| [0-9,.]*?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) Kunstschaffenden([ ,).:“\?"!\--]|$)/g,"$1$2 "+rot1+"Künstlern"+rot2+"$3");
-	  str = str.replace(/( eine| diese| die| jene| keine) Kunstschaffende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Künstlerin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Kunstschaffende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Künstlerin"+rot2+"$2");
 	  str = str.replace(/Kunstschaffenden?([ ,).:“\?"!\--]|$)/g,rot1+"Künstler"+rot2+"$1");
-	  str = str.replace(/( eine| diese| die| jene| keine) Studierende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Studentin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Studierende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Studentin"+rot2+"$2");
 	  str = str.replace(/Studierenden?([ ,).:“\?"!\--]|$)/g,rot1+"Studenten"+rot2+"$1");
-	  str = str.replace(/( eine| diese| die| jene| keine) Demonstrierende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Demonstrantin"+rot2+"$2");
+	  str = str.replace(/( eine|Eine| diese|Diese| die|Die| jene|Jene| keine|Keine) Demonstrierende([ ,).:“\?"!\--]|$)/g,"$1 "+rot1+"Demonstrantin"+rot2+"$2");
 	  str = str.replace(/Demonstrierenden?([ ,).:“\?"!\--]|$)/g,rot1+"Demonstranten"+rot2+"$1");
 
 	  // Ihre*n
