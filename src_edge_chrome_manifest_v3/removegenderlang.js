@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v5.9.8
+// v5.9.9
 // License: GPL v3.3
 
 
@@ -123,6 +123,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/(s|S)einem(\/|\_|\:|\*|\·)ihrem([ ,).:“\?"!-]|$)/g,rot1+"$1einem$3"+rot2);
 	  str = str.replace(/ihrem(\/|\_|\:|\*|\·)seinem([ ,).:“\?"!-]|$)/g,rot1+"seinem$2"+rot2);
 	  str = str.replace(/(d|D)er(\/|\_|\:|\*|\·)dem([ ,).:“\?"!-])/g,rot1+"$1em$3"+rot2); 
+	  str = str.replace(/(i|I)hm(\/|\_|\:|\*|\·)ihr([ ,).:“\?"!-])/g,rot1+"$1hm$3"+rot2); 
+	  str = str.replace(/(i|I)hr(\/|\_|\:|\*|\·)ihm([ ,).:“\?"!-])/g,rot1+"$1hm$3"+rot2); 
 	  str = str.replace(/(e|E)in(\/|\_|\:|\*|\·)eine([ ,).:“\?"!-]|$)/g,rot1+"$1in$3"+rot2);
 	  str = str.replace(/(e|E)ine(\/|\_|\:|\*|\·)ein([ ,).:“\?"!-])/g,rot1+"$1in$3"+rot2); 
 	  str = str.replace(/(e|E)inem(\/|\_|\:|\*|\·)einer([ ,).:“\?"!-])/g,rot1+"$1inem$3"+rot2); 
@@ -202,7 +204,7 @@ function removeGender(sollrot) {
 	  str = str.replace(/(ein|Ein)(\·e|\:e|\/\-e|\/e|\*e|E|\_e|\(e\))([ ,).:“\?"!\--]|$)/g,"$1$3");
 	  
 	  // freistehende jede(r), jede_r, manche(r)
-	  str = str.replace(/(jede|Jede|manche|Manche|keine|Keine|eine|Eine|einzelne|Einzelne|einzige|Einzige|eigene|Eigene|beauftragte|Beauftragte)(\·r|\:r|\/\-r|\/r|\*r|\_r|\(r\))([ ,).:“\?"!\--]|$)/g,rot1+"$1r"+rot2+"$3");
+	  str = str.replace(/(e)(\·r|\:r|\/\-r|\/r|\*r|\_r|\(r\))([ ,).:“\?"!\--]|$)/g,rot1+"$1r"+rot2+"$3");
 	  
 	  // frau
 	  str = str.replace(/ frau([ ,).:“\?"!\--]|$)/g,rot1+" man$1"+rot2);
@@ -296,8 +298,8 @@ function removeGender(sollrot) {
 
 
 	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in
-	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
-	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|Hirt)In([ ,).:“\?"!\--]|$)/g,rot1+"$1 $2$3en"+rot2+"$4");
+	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|peut)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\--]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
+	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|Hirt|peut)In([ ,).:“\?"!\--]|$)/g,rot1+"$1 $2$3en"+rot2+"$4");
 	  
 	  
 	  // Einzahl Nominativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in
