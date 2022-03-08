@@ -104,8 +104,9 @@ function removeGender(sollrot) {
 	  str = str.replace(/ä\a0308/g,"ä");
 	  str = str.replace(/Ä\A0308/g,"Ä");
 	  
-	  // LinkedIn retten
+	  // LinkedIn und AddIn retten
 	  str = str.replace(/LinkedIn/g,"Linkedin");
+	  str = str.replace(/AddIn/g,"Add-In");
 
 	  oldstr = str;
 		
