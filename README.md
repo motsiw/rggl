@@ -69,6 +69,11 @@ Version History
 
 5.9.8
 - Fix: Uigur*innen (Dativ), Chines*innen (Nominativ)
+- Fix: AddIn, PlugIn, DriveIn
+- Einige häufig genutzte Partizipien werden ersetzt, wenn das generische Maskulinum kürzer und einfacher ist:
+  Studierende, Demonstrierende, Helfende, Mitarbeitende, Pflegende, Forschende, Lesende, Kritisierende, Kunstschaffende
+  werden zu
+  Studenten, Demonstranten, Helfer, Mitarbeiter, Pfleger, Forscher, Leser, Kritiker, Künstler
 
 5.9.6
 - Bugfix
