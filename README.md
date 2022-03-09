@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.9.9 (08.03.2022)
+v5.9.9 (09.03.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,9 +68,11 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 5.9.9
-- Ergänzt: Ihm*ihr bzw. ihr*ihm
-- Fix: Dativ/Akkusativ Therapeut*in
-- Neuer Algo: neue*r, alte*r, liebende*r etc.
+- Ergänzt: Ihm:ihr bzw. ihr:ihm
+- Neuer Algo: neue:r, alte:r, liebende:r etc.
+- Ergänzt: Häufige Komposita der Partizipien (Studierendenwohnheim, Mitarbeitendenvertretung usw.)
+- Fix: Partizipien im Genitiv Singular Femininum wurden irrtümlich behandelt
+- Fix: Dativ/Akkusativ Therapeut:in
 
 5.9.8
 - Fix: Uigur*innen (Dativ), Chines*innen (Nominativ)
