@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v5.9.9
+// v6.0
 // License: GPL v3.3
 
 
@@ -74,9 +74,7 @@ function removeGender(sollrot) {
 	console.log("RGGL - prüfe "+result.length+" Seitenelemente");
 	var i;
 	var str;
-	var rot1="";
-	var rot2="";
-	var rot3="";
+
 	var oldstr="";
 	var changes=0;
 	var x=0;
@@ -84,11 +82,7 @@ function removeGender(sollrot) {
 	var strohnehrefclassstyle="";
 
 	 
-	 if (sollrot == 2) {
-		rot1="<span style='color:blue;background-color: yellow;'>";
-		rot2="</span>";
-		rot3="_";
-	 } 
+
 	
 	for (i = 0; i < result.length; i++) {
 	  if (sollrot == 2) str = result[i].innerHTML;
@@ -104,14 +98,131 @@ function removeGender(sollrot) {
 	  str = str.replace(/ä\a0308/g,"ä");
 	  str = str.replace(/Ä\A0308/g,"Ä");
 	  
+
+
+	  oldstr = str;
+	  str = behandeln(str,sollrot);
+
+	  // prüfen, ob Änderungen innerhalb von href, class oder style-Attributen stattfanden. Wenn ja, wird auf die Korrektur vorsorglich verzichtet
+	  oldohnehrefclassstyle = oldstr.replace(/(href|style|class|src|itemprop|onclick|onmouseover|xmlns|alt)=("|').*?("|')/g,"$1=$2$3");
+	  strohnehrefclassstyle = str.replace(/(href|style|class|src|itemprop|onclick|onmouseover|xmlns|alt)=("|').*?("|')/g,"$1=$2$3");
+
+	  // liefert den ersten Unterschied zwischen zwei Strings
+	  function ersterUnterschied(stringa, stringb)
+	  {
+		var i = 0, fundstelle = 0;
+
+		while (i < stringb.length)
+		{
+		  if (stringa[i] != stringb[i] || i == stringa.length) {
+			 fundstelle = i;
+			 break; 
+		  } else i++;
+		}
+		return fundstelle;
+	  }
+	  
+	  
+	  if (oldohnehrefclassstyle != strohnehrefclassstyle) 
+		{
+			changes++;
+			x=ersterUnterschied(oldohnehrefclassstyle, strohnehrefclassstyle);
+			if (x < 50) x = 50;
+			x-=50;
+			if (oldohnehrefclassstyle.length < 100) console.log("%cRGGL #"+changes+" Tag "+result[i].nodeName+" - old: ..."+oldohnehrefclassstyle.substr(x)+"...", 'color: red;');
+			else console.log("%cRGGL Change #"+changes+" Tag "+result[i].nodeName+" - old: ..."+oldohnehrefclassstyle.substr(x,100)+"...", 'color: red;');
+			if (strohnehrefclassstyle.length < 100) console.log("%cRGGL Change #"+changes+" Tag "+result[i].nodeName+" - new: ..."+strohnehrefclassstyle.substr(x)+"...", 'color: green;');
+			else console.log("%cRGGL Change #"+changes+" Tag "+result[i].nodeName+" - new: ..."+strohnehrefclassstyle.substr(x,100)+"...", 'color: green;');
+			
+			if (sollrot == 2) result[i].innerHTML = str;
+			else result[i].data = str;
+		}
+	  }
+	  
+	  // background-Skript über die Zahl der Ersetzungen informieren
+	    browser.runtime.sendMessage({
+            count: changes,
+            type: "count"
+        });
+	  
+
+		// Nachgeladene Inhalte behandeln
+		result = [];
+		var waechter = new MutationObserver(function(mutations) {
+		  mutations.forEach(function(mutation) {
+							for (var i = 0; i < mutation.addedNodes.length; i++) {
+										result.push(mutation.addedNodes[i]);
+							}
+						});
+			
+				for (i = 0; i < result.length; i++) {
+					  str = result[i].innerHTML;
+					  
+					  // Sonderbehandlung taz: Weiche Trennstriche entfernen
+					  str = str.replace(/­/g,"");
+					  // Sonderbehandlung taz / PS-Fonts: Vokale plus Trema zu richtigen Umlauten machen
+					  str = str.replace(/u\u0308/g,"ü");
+					  str = str.replace(/U\u0308/g,"Ü");
+					  str = str.replace(/o\o0308/g,"ö");
+					  str = str.replace(/O\O0308/g,"Ö");
+					  str = str.replace(/ä\a0308/g,"ä");
+					  str = str.replace(/Ä\A0308/g,"Ä");
+					  
+
+
+					  oldstr = str;
+					  str = behandeln(str,sollrot);
+
+					  // prüfen, ob Änderungen innerhalb von href, class oder style-Attributen stattfanden. Wenn ja, wird auf die Korrektur vorsorglich verzichtet
+					  oldohnehrefclassstyle = oldstr.replace(/(href|style|class|src|itemprop|onclick|onmouseover|xmlns|alt)=("|').*?("|')/g,"$1=$2$3");
+					  strohnehrefclassstyle = str.replace(/(href|style|class|src|itemprop|onclick|onmouseover|xmlns|alt)=("|').*?("|')/g,"$1=$2$3");
+
+					  
+					  
+					  if (oldohnehrefclassstyle != strohnehrefclassstyle) 
+						{
+							changes++;
+							result[i].innerHTML = str;
+						}
+					  }
+				// background-Skript über die Zahl der Ersetzungen informieren
+				browser.runtime.sendMessage({
+					count: changes,
+					type: "count"
+				});
+			
+
+		});
+
+		// Was überwachen wir
+		var target = document.body;
+		// Welche Änderungen melden wir
+		var config = { attributes: false, childList: true, characterData: false, subtree: true };
+
+		// eigentliche Observierung starten und Zielnode und Konfiguration übergeben
+		waechter.observe(target, config);
+	  
+	  
+	  // Zeit der Abarbeitung stoppen und Ergebnis in die Konsole schreiben
+	  console.timeEnd('RGGL');
+}
+
+
+function behandeln(str,sollrot)
+{
+	var rot1="";
+	var rot2="";
+	var rot3="";
+	 if (sollrot == 2) {
+		rot1="<span style='color:blue;background-color: yellow;'>";
+		rot2="</span>";
+		rot3="_";
+	 } 
 	  // LinkedIn und AddIn retten
 	  str = str.replace(/LinkedIn/g,"Linkedin");
 	  str = str.replace(/AddIn/g,"Add-in");
 	  str = str.replace(/PlugIn/g,"Plug-in");
 	  str = str.replace(/DriveIn/g,"Drive-in");
-
-	  oldstr = str;
-		
 	  
 	  // Konstruktionen wie Der/die oder sie:er durch das generische Maskulinum ersetzen
 	  str = str.replace(/(der|Der)(\/|\_|\:|\*|\·)die([ ,).:“\?"!-])/g,rot1+"$1$3"+rot2);
@@ -346,52 +457,5 @@ function removeGender(sollrot) {
 	  str = str.replace(/ranzos([ ,).:“\?"!\-\/]|$)/g,"ranzose$1");
 	  str = str.replace(/ein Katz([ ,).:“\?"!\-\/]|$)/g,"eine Katze$1");
 
-
-
-	  // prüfen, ob Änderungen innerhalb von href, class oder style-Attributen stattfanden. Wenn ja, wird auf die Korrektur vorsorglich verzichtet
-	  oldohnehrefclassstyle = oldstr.replace(/(href|style|class|src|itemprop|onclick|onmouseover|xmlns|alt)=("|').*?("|')/g,"$1=$2$3");
-	  strohnehrefclassstyle = str.replace(/(href|style|class|src|itemprop|onclick|onmouseover|xmlns|alt)=("|').*?("|')/g,"$1=$2$3");
-
-	  // liefert den ersten Unterschied zwischen zwei Strings
-	  function ersterUnterschied(stringa, stringb)
-	  {
-		var i = 0, fundstelle = 0;
-
-		while (i < stringb.length)
-		{
-		  if (stringa[i] != stringb[i] || i == stringa.length) {
-			 fundstelle = i;
-			 break; 
-		  } else i++;
-		}
-		return fundstelle;
-	  }
-	  
-	  
-	  if (oldohnehrefclassstyle != strohnehrefclassstyle) 
-		{
-			changes++;
-			x=ersterUnterschied(oldohnehrefclassstyle, strohnehrefclassstyle);
-			if (x < 50) x = 50;
-			x-=50;
-			if (oldohnehrefclassstyle.length < 100) console.log("%cRGGL #"+changes+" Tag "+result[i].nodeName+" - old: ..."+oldohnehrefclassstyle.substr(x)+"...", 'color: red;');
-			else console.log("%cRGGL Change #"+changes+" Tag "+result[i].nodeName+" - old: ..."+oldohnehrefclassstyle.substr(x,100)+"...", 'color: red;');
-			if (strohnehrefclassstyle.length < 100) console.log("%cRGGL Change #"+changes+" Tag "+result[i].nodeName+" - new: ..."+strohnehrefclassstyle.substr(x)+"...", 'color: green;');
-			else console.log("%cRGGL Change #"+changes+" Tag "+result[i].nodeName+" - new: ..."+strohnehrefclassstyle.substr(x,100)+"...", 'color: green;');
-			
-			if (sollrot == 2) result[i].innerHTML = str;
-			else result[i].data = str;
-		}
-	  }
-	  
-	  // background-Skript über die Zahl der Ersetzungen informieren
-	    browser.runtime.sendMessage({
-            count: changes,
-            type: "count"
-        });
-	  
-	  // Zeit der Abarbeitung stoppen und Ergebnis in die Konsole schreiben
-	  console.timeEnd('RGGL');
+	 return str;
 }
-
-
