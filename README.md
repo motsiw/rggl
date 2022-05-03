@@ -42,7 +42,7 @@ Wenn Sie wertvolle Informationen und Meinungen nicht ignorieren wollen, gleichze
 
 Funktionsweise
 
-Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
+Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 1. Ersatz von Dem/der, er:sie, man*frau usw. durch das generische Maskulinum.
 2. Singular: Lautverschiebung bei bestimmten Nomen (Bäuer*in => Bauer, Schwäger*in => Schwager).
 3. Korrektur Nomen auf -erin/-erer (Veräußer*in => Veräußerer)
@@ -63,6 +63,7 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 18. Einzahl auf 'r' bei Nomen auf -dnete,-wachsene (Erwachsene*r => Erwachsener)
 19. Alle verbleibenden *innen und *in entfernen.
 20. Korrekturen für unregelmäßige Formen (Israel*innen => Israelis, Juden/Jüdinnen => Juden)
+21. Ersatz häufig verwendeter Partizipien (Studierende => Studenten) sowie deren Komposita (Mitarbeitendenausweis => Mitarbeiterausweis)
 
 
 
@@ -71,7 +72,8 @@ Version History
 6.0
 - Ergänzt: Brit:innen, Archivar:innen
 - Neu: Gender-Einzahl im Nominativ mit "wie" und "als" plus Adjektiv (als freie Journalist:in => als freier Journalist)
-- Neue Endzeichen für Elementbegrenzung ergänzt
+- Fix: Dativ-Konstruktionen mit Adverb+Zahlwort (unter beinahe 350 Köch:innen => unter beinahe 350 Köchen)
+- Ergänzt: Neue Endzeichen für Elementbegrenzung
 
 5.9.9
 - Ergänzt: Ihm:ihr bzw. ihr:ihm
