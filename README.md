@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v5.9.9 (09.03.2022)
+v6.0 (03.05.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -15,6 +15,7 @@ Das Add-On entfernt folgendes:
 * Binnenmajuskel (AnwenderInnen)
 * Gendergap (Anwender_innen)
 * Schrägstrichlösung (Anwender/-innen)
+* Deppenschrägstrichlösung (Anwender/innen)
 * Klammerlösung (Anwender(innen))
 
 Viele Spezialfälle werden berücksichtigt. Dadurch werden deutschsprachige Webseiten besser lesbar dargestellt. 
@@ -67,15 +68,20 @@ Folgende 20 Regeln werden in diesem Add-On abgearbeitet:
 
 Version History
 
+6.0
+- Ergänzt: Brit:innen, Archivar:innen
+- Neu: Gender-Einzahl im Nominativ mit "wie" und "als" plus Adjektiv (als freie Journalist:in => als freier Journalist)
+- Neue Endzeichen für Elementbegrenzung ergänzt
+
 5.9.9
 - Ergänzt: Ihm:ihr bzw. ihr:ihm
 - Neuer Algo: neue:r, alte:r, liebende:r etc.
 - Ergänzt: Häufige Komposita der Partizipien (Studierendenwohnheim, Mitarbeitendenvertretung usw.)
-- Fix: Partizipien im Genitiv Singular Femininum wurden irrtümlich behandelt
+- Fix: Partizipien im Genitiv singular wurden irrtümlich behandelt
 - Fix: Dativ/Akkusativ Therapeut:in
 
 5.9.8
-- Fix: Uigur*innen (Dativ), Chines*innen (Nominativ)
+- Fix: Uigur:innen (Dativ), Chines:innen (Nominativ)
 - Fix: AddIn, PlugIn, DriveIn
 - Einige häufig genutzte Partizipien werden ersetzt, wenn das generische Maskulinum kürzer und einfacher ist:
   Studierende, Demonstrierende, Helfende, Mitarbeitende, Pflegende, Forschende, Lesende, Kritisierende, Kunstschaffende
@@ -90,28 +96,28 @@ Version History
 - Ergänzt: Sklav:innen
 
 5.9.4
-- Ergänzt: Narzisst*innen
+- Ergänzt: Narzisst:innen
 
 5.9.3
-- Ergänzt: Rekrut*innen
+- Ergänzt: Rekrut:innen
 
 5.9.2
 - Ergänzt: Feind:innen, Kamerad:innen
-- Ergänzt: Uigur*innen
+- Ergänzt: Uigur:innen
 
 5.9
 - 'über' steht jetzt für den Akkusativ (vormals Dativ)
-- Ergänzt: Idiot*innen, Zypriot*innen
+- Ergänzt: Idiot:innen, Zypriot:innen
 
 5.8
-- Ergänzt: Alle Arten von Wirt*innen und Hirt*innen
+- Ergänzt: Alle Arten von Wirt:innen und Hirt:innen
 
 5.7
 - Komposita werden jetzt ebenfalls behandelt:
-- ArbeitgeberInnengremium, Kolleg*innenkreis, Ärzt*innenbund, Minister_innenriege
+- ArbeitgeberInnengremium, Kolleg:innenkreis, Ärzt:innenbund, Minister_innenriege
 
 5.6
-- Ergänzt: Kommissar*innen
+- Ergänzt: Kommissar:innen
 
 5.5
 - Das Add-On wird nur noch auf deutschsprachigen Webseiten aktiv.
