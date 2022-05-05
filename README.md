@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0 (03.05.2022)
+v6.0.1 (05.05.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,6 +68,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+6.0.1
+- Ergänzt: Jesid:innen (Nominativ/Akkusativ)
 
 6.0
 - Ergänzt: Brit:innen, Archivar:innen
