@@ -71,6 +71,10 @@ Version History
 
 6.0.1
 - Ergänzt: Jesid:innen (Nominativ/Akkusativ)
+- Verbessert: Erkennung Dativ plural bei unseren/ihren
+- Ergänzt: Prinz:essin
+- Ergänzt: Jede:n, seine:n
+- Ergänzt: Den:die und Die:den
 
 6.0
 - Ergänzt: Brit:innen, Archivar:innen

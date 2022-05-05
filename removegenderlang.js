@@ -115,6 +115,8 @@ function removeGender(sollrot) {
 	  
 	  // Konstruktionen wie Der/die oder sie:er durch das generische Maskulinum ersetzen
 	  str = str.replace(/(der|Der)(\/|\_|\:|\*|\·)die([ ,).:“\?"!-])/g,rot1+"$1$3"+rot2);
+	  str = str.replace(/(den|Den)(\/|\_|\:|\*|\·)die([ ,).:“\?"!-])/g,rot1+"$1$3"+rot2);
+	  str = str.replace(/(d|D)ie(\/|\_|\:|\*|\·)den([ ,).:“\?"!-])/g,rot1+"$1en$3"+rot2);
 	  str = str.replace(/(er|Er)(\/|\_|\:|\*|\·)sie([ ,).:“\?"!-]|$)/g,rot1+"$1$3"+rot2);
 	  str = str.replace(/(d|D)ie(\/|\_|\:|\*|\·)der([ ,).:“\?"!-])/g,rot1+"$1er$3"+rot2);
 	  str = str.replace(/sie(\/|\_|\:|\*|\·)er([ ,).:“\?"!-]|$)/g,rot1+"er$2"+rot2);
@@ -206,8 +208,10 @@ function removeGender(sollrot) {
 	  str = str.replace(/([V|v]iele|[V|v]ielen|[E|e]inigen|[E|e]inige|[M|m]ehreren|[A|a]llen|[A|a]lle|[W|w]enige|[E|e]tliche|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[E|e]in paar|Zahl der|Teil der) Kunstschaffenden([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Künstlern"+rot2+"$2");
 	  str = str.replace(/([V|v]ieler|[E|e]iniger|[M|m]ehrerer|[A|a]ller|[D|d]iverser|[W|w]eniger|[E|e]tlicher|[E|e]in paar) Kunstschaffender([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Künstler"+rot2+"$2");
 
-	  // Ihre*n
-	  str = str.replace(/(i|I)hre(\·n |\:n |\*n |\/\-n |\_n |\(n |N )/g,"$1hren ");
+	  // Ihre*n, jede*n, seine*n
+	  str = str.replace(/(i|I)hre(\·n|\:n|\*n|\/\-n|\_n|\(n\)|N)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1hren"+rot2+"$3");
+	  str = str.replace(/(j|J)ede(\·n|\:n|\*n|\/\-n|\_n|\(n\)|N)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1eden"+rot2+"$3");
+	  str = str.replace(/(s|S)eine(\·n|\:n|\*n|\/\-n|\_n|\(n\)|N)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1einen"+rot2+"$3");
 	  
 	  // aus ein(e) wird ein, aus Liebe:r wird Lieber, zusammen mit Nomen:
 	  str = str.replace(/(eine|Eine)(\·n|\:n|\/\-n|\/n|\*n|N|\_n|\(n\))([ ,).:“\?"!\-\/\<\&]|$)/g,"$1n$3");
@@ -241,6 +245,11 @@ function removeGender(sollrot) {
 	  // Juden
 	  str = str.replace(/(J|j)üd(\·|\:|\*|\/\-|\/|\_)(innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1uden"+rot2+"$4");
 	  str = str.replace(/([A-Za-zÜÖÄüöäß])(J|j)üd(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2uden"+rot2+"$4");	  
+	  
+	  // Prinz*essin und Prinz(essin)
+	  str = str.replace(/(rinz)(\·|\*|\:|\_)essin([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1"+rot2+"$3");
+	  str = str.replace(/(rinz)\(essin\)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1"+rot2+"$2");
+	  
 
 	  // Komposita auflösen
 	  str = str.replace(/([a-zäüöß])(Innen|\*innen|\:innen|\_innen|\·innen)([a-zäüöß])/g,"$1$2 %%%$3");
@@ -257,16 +266,16 @@ function removeGender(sollrot) {
 	  // Beispiel: unter Therapeut*innen => unter Therapeuten
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
 
-	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?[bcdfghjklmnpqstvwxz])(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4en"+rot2+"$6");
-	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?[bcdfghjklmnpqstvwxz])Innen([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4en"+rot2+"$5");
+	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut|unseren|ihren)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?[bcdfghjklmnpqstvwxz])(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4en"+rot2+"$6");
+	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut|unseren|ihren)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?[bcdfghjklmnpqstvwxz])Innen([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4en"+rot2+"$5");
 
 
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Dativ, dann wird *innen zu en, Spezialfälle
 	  // Beispiel: unter Autor*innen => unter Autoren
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
 	  
-	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?)(or|fahr|gar|eur|dar|tär|när|tar|ssar|gur|ivar)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4$5en"+rot2+"$7");
-	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?)(or|fahr|gar|eur|dar|tär|när|tar|ssar|gur|ivar)Innen([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4$5en"+rot2+"$6");
+	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut|unseren|ihren)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?)(or|fahr|gar|eur|dar|tär|när|tar|ssar|gur|ivar)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4$5en"+rot2+"$7");
+	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut|unseren|ihren)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?)(or|fahr|gar|eur|dar|tär|när|tar|ssar|gur|ivar)Innen([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4$5en"+rot2+"$6");
 
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Akkusativ, dann wird *innen entfernt, wenn das Nomen auf 'r' endet
 	  // Beispiel: Angriffe auf Arbeiter*innen => Angriffe auf Arbeiter
@@ -278,8 +287,8 @@ function removeGender(sollrot) {
 	  // Beispiel: den Arbeiter:innen => den Arbeitern
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
 
-	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4n"+rot2+"$6");
-	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4n"+rot2+"$6");
+	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut|unseren|ihren)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4n"+rot2+"$6");
+	  str = str.replace(/( den|von|mit|auf|unter|elen| vor|zu|igen| aus| an|bei|außer|nach|samt|seit|llen|nchen|meinen|seinen|keinen| laut|unseren|ihren)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4n"+rot2+"$6");
 
 
 	  // Dativ-Konstruktionen mit "zufolge", wenn das Nomen nicht auf 'r' endet
