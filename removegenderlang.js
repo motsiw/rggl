@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v6.0.1
+// v6.0.2
 // License: GPL v3.3
 
 
@@ -310,18 +310,18 @@ function removeGender(sollrot) {
 
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch e ersetzt
 	  // Beispiel: Ingenieur:innen => Ingenieure, DomteurInnen => Dompteure, Päpst:innen => Päpste
-	  str = str.replace(/(Wirt|wirt|eur|pst|bst|hund|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|eind|rzt|köch|Köch|rät|ssar|ivar)(\·|\:|\*|\/\-|\/|\_)(innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1e"+rot2+"$4");
-	  str = str.replace(/([a-züöäß])(eur|pst|bst|hund|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|eind|rzt|köch|Köch|rät|ssar|wirt|Wirt|ivar)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2e"+rot2+"$4");
+	  str = str.replace(/(Wirt|wirt|eur|pst|bst|hund|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|eind|rzt|köch|Köch|rät|ssar|ivar|nar)(\·|\:|\*|\/\-|\/|\_)(innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1e"+rot2+"$4");
+	  str = str.replace(/([a-züöäß])(eur|pst|bst|hund|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|eind|rzt|köch|Köch|rät|ssar|wirt|Wirt|ivar|nar)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2e"+rot2+"$4");
 	  str = str.replace(/( )(Hund|Köch|Wirt)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2e"+rot2+"$4");
 	  
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -or, -ist, -leg, -nom, -iech usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|kund|soph|mand|erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|iot|brit)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1en"+rot2+"$3");
-	  str = str.replace(/(esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
+	  str = str.replace(/(ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|kund|soph|mand|erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|iot|brit)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1en"+rot2+"$3");
+	  str = str.replace(/(ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|und|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
 
 	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in
-	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|peut)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
-	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|Hirt|peut)In([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1 $2$3en"+rot2+"$4");
+	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|peut|ilot)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
+	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem) ([a-zA-ZüöäßÜÖÄ]*?)(igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|Hirt|peut|ilot)In([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1 $2$3en"+rot2+"$4");
 	  
 	  // Einzahl Nominativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in
 	  str = str.replace(/(leg|log|pert|gog|oss|äst|atz|eug|esid)(\·|\:|\*|\/\-|\/|\_)(in)([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1e"+rot2+"$4");
