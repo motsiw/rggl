@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0.2 (01.06.2022)
+v6.0.3 (02.06.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,6 +68,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+6.0.3
+- Ergänzt: Passagier:innen
 
 6.0.2
 - Ergänzt: Missionar:innen, Pilot:innen
