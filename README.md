@@ -70,7 +70,7 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.3
-- Ergänzt: Passagier:innen
+- Ergänzt: Passagier:innen, Fries:innen, Sorb:innen
 
 6.0.2
 - Ergänzt: Missionar:innen, Pilot:innen
