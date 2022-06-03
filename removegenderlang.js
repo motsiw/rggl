@@ -244,7 +244,16 @@ function removeGender(sollrot) {
 	  
 	  // Juden
 	  str = str.replace(/(J|j)üd(\·|\:|\*|\/\-|\/|\_)(innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1uden"+rot2+"$4");
-	  str = str.replace(/([A-Za-zÜÖÄüöäß])(J|j)üd(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2uden"+rot2+"$4");	  
+	  str = str.replace(/(J|j)üd(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1uden"+rot2+"$3");	  
+	  
+	  // Sinti und Roma
+	  str = str.replace(/(S|s)inti(\·|\:|\*|\/\-|\/|\_)(zze)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1inti"+rot2+"$4");
+	  str = str.replace(/(S|s)inti\(zze\)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1inti"+rot2+"$3");	 
+	  str = str.replace(/(R|r)om(\·|\:|\*|\/\-|\/|\_)(nja)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1oma"+rot2+"$4");
+	  str = str.replace(/(R|r)om\(nja\)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1oma"+rot2+"$3");	 
+	  str = str.replace(/(R|r)oma(\·|\:|\*|\/\-|\/|\_)(nja)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1oma"+rot2+"$4");
+	  str = str.replace(/(R|r)oma\(nja\)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1oma"+rot2+"$3");	 
+	  
 	  
 	  // Prinz*essin und Prinz(essin)
 	  str = str.replace(/(rinz)(\·|\*|\:|\_)essin([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1"+rot2+"$3");
