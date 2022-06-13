@@ -71,6 +71,7 @@ Version History
 
 6.0.4
 - Ergänzt: Gesell:innen
+- Fix Umlaut: Anwält:in - Anwalt
 
 6.0.3
 - Ergänzt: Passagier:innen, Fries:innen, Sorb:innen, Sinti:zze, Rom:nja, Roma:nja
