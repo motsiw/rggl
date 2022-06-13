@@ -137,6 +137,7 @@ function removeGender(sollrot) {
 	  str = str.replace(/(b|B)äuer(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))/g,"$1auer$2");
 	  str = str.replace(/Ärzt(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))([ ,).:“\?"!-])/g,"Arzt$2");
 	  str = str.replace(/ärzt(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))([ ,).:“\?"!-])/g,"arzt$2");
+	  str = str.replace(/(a|A)nwält(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))([ ,).:“\?"!-])/g,"$1nwalt$3");
 	  str = str.replace(/(n|N)ärr(\·in|\:in|\*in|\/\-in||\/in|In|\_in|\(in|In\))/g,"$1arr$2");
 	  str = str.replace(/(h|H)ünd(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))/g,"$1und$2");
 	  str = str.replace(/(k|K)ätz(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))/g,"$1atz$2");
