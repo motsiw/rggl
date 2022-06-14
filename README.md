@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0.4 (xx.06.2022)
+v6.0.4 (14.06.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -70,8 +70,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.4
-- Ergänzt: Gesell:innen
-- Fix Umlaut: Anwält:in - Anwalt
+- Ergänzt: Gesell:innen, Kompars:innen, welche:n
+- Fix: Anwält:in, Kund:in, Patient:in
+- Verbessert: Erkennung Studierende/Demonstrierende
 
 6.0.3
 - Ergänzt: Passagier:innen, Fries:innen, Sorb:innen, Sinti:zze, Rom:nja, Roma:nja
