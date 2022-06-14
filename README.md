@@ -70,9 +70,11 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.4
-- Ergänzt: Gesell:innen, Kompars:innen, welche:n
-- Fix: Anwält:in, Kund:in, Patient:in
+- Ergänzt: Gesell:innen, Kompars:innen, welche:n, Gäst:innen
+- Ergänzt: Dozierende (Dozenten)
+- Fix Einzahl: Anwält:in, Kund:in, Patient:in
 - Verbessert: Erkennung Studierende/Demonstrierende
+- DIV-Tags werden jetzt im Modus "Filterung aktiv" auch behandelt
 
 6.0.3
 - Ergänzt: Passagier:innen, Fries:innen, Sorb:innen, Sinti:zze, Rom:nja, Roma:nja
