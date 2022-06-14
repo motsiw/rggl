@@ -4,7 +4,7 @@
 
 
 // Einstellungen laden
-chrome.storage.local.get(function(settings) {
+browser.storage.local.get(function(settings) {
 
 	if (spracheWebsite())
 	{
@@ -14,7 +14,7 @@ chrome.storage.local.get(function(settings) {
 	else
 	{
 		console.log("RGGL - Webseite nicht als deutschsprachig erkannt.");
-		chrome.runtime.sendMessage({
+		browser.runtime.sendMessage({
 			count: '-',
 			type: "count"
 		});
@@ -425,7 +425,7 @@ function removeGender(sollrot) {
 	  }
 	  
 	  // background-Skript über die Zahl der Ersetzungen informieren
-	    chrome.runtime.sendMessage({
+	    browser.runtime.sendMessage({
             count: changes,
             type: "count"
         });
