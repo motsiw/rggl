@@ -182,7 +182,10 @@ function removeGender(sollrot) {
 
 	  // Partizipien
 	  str = str.replace(/([V|v]iele|[E|e]inige|[M|m]ehrere|[A|a]lle|[W|w]enige|[E|e]tliche|[E|e]in paar| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| hunderte| tausende| dass| weil| für| durch) Studierende([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Studenten"+rot2+"$2");
-	  str = str.replace(/(Studierenden)(zahl|verband|vereinigung|werk|heim|anteil|schaft|ausweis|wohnheim|verbindung|vertretung|gruppe)/g,rot1+"Studenten"+rot2+"$2");
+	  str = str.replace(/([D|d]er) Studierende([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Student"+rot2+"$2");
+	  str = str.replace(/([E|e]in|[K|k]ein) Studierender([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Student"+rot2+"$2");
+	  str = str.replace(/([D|d]ie|[E|e]ine|[K|k]eine) Studierende([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Studentin"+rot2+"$2");
+	  str = str.replace(/(Studierenden)(zahl|verband|vereinigung|werk|heim|anteil|schaft|ausweis|wohnheim|verbindung|vertretung|gruppe|\-WG)/g,rot1+"Studenten"+rot2+"$2");
 	  str = str.replace(/([V|v]iele|[V|v]ielen|[E|e]inigen|[E|e]inige|[M|m]ehreren|[A|a]llen|[A|a]lle|[W|w]enige|[E|e]tliche|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[V|v]ieler|[E|e]iniger|[V|v]iele|[E|e]inige|[M|m]ehrerer|[A|a]ller|[D|d]iverser|[W|w]eniger|[E|e]tlicher|ein paar|Teil der|Zahl der| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| hunderten| tausenden| mit| die| bei| diese| von) (Studierender|Studierenden)([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Studenten"+rot2+"$3");
 
 	  str = str.replace(/([V|v]iele|[E|e]inige|[M|m]ehrere|[A|a]lle|[W|w]enige|[E|e]tliche|[E|e]in paar| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| hunderte| tausende| dass| weil| für| durch) Dozierende([ ,).:“\?"!\-\/\<\&]|$)/g,"$1 "+rot1+"Dozenten"+rot2+"$2");
