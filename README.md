@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0.5 (14.06.2022)
+v6.0.6 (xx.06.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,6 +68,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+6.0.6
+- 'neben' wird jetzt als Indiz für den Dativ interpretiert
 
 6.0.5
 - Ergänzt: Seinen:ihren
