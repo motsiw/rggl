@@ -70,7 +70,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.6
-- 'neben' wird jetzt als Indiz für den Dativ interpretiert
+- 'neben' gilt jetzt als Präposition für den Dativ
+- Adverb 'knapp' hinzugefügt
+- Adverbien werden jetzt auch im Genitiv plural verarbeitet
 
 6.0.5
 - Ergänzt: Seinen:ihren
