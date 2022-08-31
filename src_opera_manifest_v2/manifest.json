@@ -1,0 +1,41 @@
+{
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "128": "button/gendericon_black_128x128.png",
+      "64": "button/gendericon_black.png"
+    },
+    "default_title": "Filterung aktiv"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "removegenderlang.js"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "description": "Entfernt deutsche Gender-Sprache weitgehend aus Webseiten.",
+  "developer": {
+    "name": "motsiweech"
+  },
+  "icons": {
+    "64": "button/gendericon_black.png"
+  },
+  "manifest_version": 2,
+  "name": "Remove German Gender Language",
+  "permissions": [
+    "storage"
+  ],
+  "update_url": "https://extension-updates.opera.com/api/omaha/update/",
+  "version": "6.0.8"
+}
