@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0.6 (xx.06.2022)
+v6.0.7 (31.08.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,6 +68,10 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+6.0.7
+- Ergänzt: Diplomat:innen
+- Ergänzt: ihr:e, sein:e
 
 6.0.6
 - 'neben' gilt jetzt als Präposition für den Dativ
