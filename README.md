@@ -70,8 +70,8 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.8
-- Neu: Verben, die den Dativ bei den gegenderten Formen auslösen: gestehen/gesteht/gestand, erlauben/erlaubt/erlaubte
-- Ergänzt: jedeR
+- Neu: Verben, die den Dativ bei den gegenderten Formen auslösen (gestehen, erlauben)
+- Ergänzt: jedeR, mancheR, welcheR usw.
 
 6.0.7
 - Ergänzt: Diplomat:innen
