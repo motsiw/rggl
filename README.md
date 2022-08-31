@@ -70,7 +70,7 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.8
-- Neu: Verben, die den Dativ bei den gegenderten Formen auslösen (gestehen, erlauben)
+- Neu: Verben, die den Dativ bei gegenderten Formen auslösen (gestehen, erlauben, antworten, ähneln usw.)
 - Ergänzt: jedeR, mancheR, welcheR usw.
 
 6.0.7
