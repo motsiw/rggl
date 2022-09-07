@@ -70,8 +70,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.0.9
-- Ergänzt: Autofahrende => Autofahrer
-- Ergänzt: jenen (Indiz für  Dativ plural)
+- Ergänzt: Autofahrende (Autofahrer)
+- Ergänzt: jenen als Indiz für Dativ plural
+- vebesserte Erkennung von Partizip-Konstruktionen
 
 6.0.8
 - Neu: Verben, die den Dativ bei gegenderten Formen auslösen (gestehen, erlauben, antworten, ähneln usw.)
