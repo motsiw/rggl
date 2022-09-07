@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0.8 (31.08.2022)
+v6.0.9 (xx.09.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,6 +68,10 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+6.0.9
+- Ergänzt: Autofahrende => Autofahrer
+- Ergänzt: jenen (Indiz für  Dativ plural)
 
 6.0.8
 - Neu: Verben, die den Dativ bei gegenderten Formen auslösen (gestehen, erlauben, antworten, ähneln usw.)
