@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.0.9 (07.09.2022)
+v6.1.0 (11.09.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
@@ -68,6 +68,9 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 
 
 Version History
+
+6.1.0
+- Ergänzt: Logopäd:innen, Orthopäd:innen 
 
 6.0.9
 - Ergänzt: Autofahrende (Autofahrer)
