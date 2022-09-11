@@ -262,8 +262,8 @@ function removeGender(sollrot) {
 	  str = str.replace(/(frau)(\·|\/|\/\-|\_|\:|\*)man([ ,).:“\?"!-])/g,rot1+"man"+rot2+"$3");
 	  
 	  // Jüdinnen/Juden bzw. Juden/Jüdinnen
-	  str = str.replace(/([ ,).:“\?"!-])([a-zA-ZüöäßÜÖÄ]*?)(innen)[\·\/\*\:\-\_]([a-zA-ZüöäßÜÖÄ]*?)(en)([ ,).:“\?"!-])/g,rot1+"$1$4$5"+rot2+"$6");
-	  str = str.replace(/([ ,).:“\?"!-])([a-zA-ZüöäßÜÖÄ]*?)(en)[\·\/\*\:\-\_]([a-zA-ZüöäßÜÖÄ]*?)(innen)([ ,).:“\?"!-])/g,rot1+"$1$2$3"+rot2+"$6");
+	  str = str.replace(/([ ,).:“\?"!-])([a-zA-ZüöäßÜÖÄ]*?)(innen)[\·\/\*\:\_]([a-zA-ZüöäßÜÖÄ]*?)(en)([ ,).:“\?"!-])/g,rot1+"$1$4$5"+rot2+"$6");
+	  str = str.replace(/([ ,).:“\?"!-])([a-zA-ZüöäßÜÖÄ]*?)(en)[\·\/\*\:\_]([a-zA-ZüöäßÜÖÄ]*?)(innen)([ ,).:“\?"!-])/g,rot1+"$1$2$3"+rot2+"$6");
 	  
 	  // geklammertes Binnen-(inn) entfernen
 	  str = str.replace(/([a-züöäß])\(inn\)([a-züöäß]|$)/g,rot1+"$1$2"+rot2);
