@@ -70,7 +70,7 @@ Folgende 21 Regeln werden in diesem Add-On abgearbeitet:
 Version History
 
 6.1.2
-- Ergänzt: Präposition 'an' erzwingt den Akkussativ mit bestimmten Verben
+- Ergänzt: 'an' erzwingt den Akkusativ mit Verben/Substantiven, die eine Richtung angeben
 
 6.1.1
 - Bugfix
