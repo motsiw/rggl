@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v6.1.1
+// v6.1.2
 // License: GPL v3.3
 
 
@@ -329,8 +329,8 @@ function removeGender(sollrot) {
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Akkusativ, dann wird *innen entfernt, wenn das Nomen auf 'r' endet
 	  // Beispiel: Angriffe auf Arbeiter*innen => Angriffe auf Arbeiter
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
-	  str = str.replace(/(Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4"+rot2+"$6");
-	  str = str.replace(/(Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4"+rot2+"$6");
+	  str = str.replace(/(denke an|denken an|schreibe an|schreiben an|Brief an|Briefe an|Botschaft an|Botschaften an|Zahlung an|Zahlungen an|Gabe an|Gaben an|Spende an|Spenden an|Überweisung an|Überweisungen an|Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4"+rot2+"$6");
+	  str = str.replace(/(denke an|denken an|schreibe an|schreiben an|Brief an|Briefe an|Botschaft an|Botschaften an|Zahlung an|Zahlungen an|Gabe an|Gaben an|Spende an|Spenden an|Überweisung an|Überweisungen an|Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4"+rot2+"$6");
 
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Dativ, dann wird *innen zu n, wenn das Nomen auf 'r' endet
 	  // Beispiel: den Arbeiter:innen => den Arbeitern
