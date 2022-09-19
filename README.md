@@ -2,7 +2,7 @@
 Remove German Gender Language (RGGL)
 ------------------------------------
 
-v6.1.3 (xx.09.2022)
+v6.1.3 (19.09.2022)
 
 Autor: Motsi Weech (motsi.weech ät protonmail.com)
 
