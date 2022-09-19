@@ -1,5 +1,5 @@
 // Remove German Gender Language
-// v6.1.2
+// v6.1.3
 // License: GPL v3.3
 
 
@@ -329,8 +329,8 @@ function removeGender(sollrot) {
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Akkusativ, dann wird *innen entfernt, wenn das Nomen auf 'r' endet
 	  // Beispiel: Angriffe auf Arbeiter*innen => Angriffe auf Arbeiter
 	  // gilt auch, wenn eine Zahl oder ein Zahlwort dazwischen steht
-	  str = str.replace(/(denke an|denken an|schreibe an|schreiben an|Brief an|Briefe an|Botschaft an|Botschaften an|Zahlung an|Zahlungen an|Gabe an|Gaben an|Spende an|Spenden an|Überweisung an|Überweisungen an|Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4"+rot2+"$6");
-	  str = str.replace(/(denke an|denken an|schreibe an|schreiben an|Brief an|Briefe an|Botschaft an|Botschaften an|Zahlung an|Zahlungen an|Gabe an|Gaben an|Spende an|Spenden an|Überweisung an|Überweisungen an|Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4"+rot2+"$6");
+	  str = str.replace(/(warte auf|warten auf|ziele auf|zielen auf|denke an|denken an|schreibe an|schreiben an|Brief an|Briefe an|Botschaft an|Botschaften an|Zahlung an|Zahlungen an|Gabe an|Gaben an|Spende an|Spenden an|Überweisung an|Überweisungen an|Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1$2$3 $4"+rot2+"$6");
+	  str = str.replace(/(warte auf|warten auf|ziele auf|zielen auf|denke an|denken an|schreibe an|schreiben an|Brief an|Briefe an|Botschaft an|Botschaften an|Zahlung an|Zahlungen an|Gabe an|Gaben an|Spende an|Spenden an|Überweisung an|Überweisungen an|Übergriffen auf|Übergriffe auf|Übergriff auf|Angriffe auf|Angriffen auf|Angriff auf|Druck auf|Bezug auf|Wirkung auf)(| fast| beinahe| mehr als| weniger als| rund| aufgerundet| abgerundet| durchschnittlich| knapp)(| [0-9,.]+?| zwei| drei| vier| fünf| sechs| sieben| acht| neun| zehn| elf| zwölf| zwanzig| dreißig| vierzig| fünfzig| hundert| tausend| [a-zA-ZüöäßÜÖÄ]*?en) ([a-zA-ZüöäßÜÖÄ\-]*?r)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2$3 $4"+rot2+"$6");
 
 	  // Bestimmte Vorsatzwörter und -silben deuten auf den Dativ, dann wird *innen zu n, wenn das Nomen auf 'r' endet
 	  // Beispiel: den Arbeiter:innen => den Arbeitern
@@ -360,15 +360,15 @@ function removeGender(sollrot) {
 
 
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -eur, -pst oder -bst enden, wird das :innen durch e ersetzt
-	  // Beispiel: Ingenieur:innen => Ingenieure, DomteurInnen => Dompteure, Päpst:innen => Päpste
+	  // Beispiel: Ingenieur:innen => Ingenieure, DompteurInnen => Dompteure, Päpst:innen => Päpste
 	  str = str.replace(/(Gäst|gäst|Wirt|wirt|eur|pst|bst|hund|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|eind|rzt|köch|Köch|rät|ssar|ivar|nar|agier)(\·|\:|\*|\/\-|\/|\_)(innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1e"+rot2+"$4");
 	  str = str.replace(/([a-züöäß])(Gäst|gäst|eur|pst|bst|hund|dar|ölf|pitän|tär|när|wält|dät|slim|eamt|annt|llt|reund|eind|rzt|köch|Köch|rät|ssar|wirt|Wirt|ivar|nar|agier)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2e"+rot2+"$4");
 	  str = str.replace(/( )(Hund|Köch|Wirt)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2e"+rot2+"$4");
 	  
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -or, -ist, -leg, -nom, -iech usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
-	  str = str.replace(/(pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|soph|mand|erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|iot|brit|mat|päd)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1en"+rot2+"$3");
-	  str = str.replace(/(pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit|mat|päd)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
+	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|soph|mand|erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|iot|brit|mat|päd)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1en"+rot2+"$3");
+	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit|mat|päd)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
 
 	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in
 	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem|jenem) ([a-zA-ZüöäßÜÖÄ]*?)(tient|sell|igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|peut|ilot|mat|päd)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
