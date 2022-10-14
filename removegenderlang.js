@@ -116,6 +116,7 @@ function removeGender(sollrot) {
 	  // LinkedIn und AddIn retten
 	  str = str.replace(/LinkedIn/g,"Linkedin");
 	  str = str.replace(/AddIn/g,"Add-in");
+	  str = str.replace(/LogIn/g,"Login");
 	  str = str.replace(/PlugIn/g,"Plug-in");
 	  str = str.replace(/DriveIn/g,"Drive-in");
 
