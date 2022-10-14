@@ -410,6 +410,15 @@ function removeGender(sollrot) {
 	  str = str.replace(/sraelisen/g,"sraelis");
 	  str = str.replace(/ranzos([ ,).:“\?"!\-\/\<\&]|$)/g,"ranzose$1");
 	  str = str.replace(/ein Katz([ ,).:“\?"!\-\/\<\&]|$)/g,"eine Katze$1");
+	  
+	  // Einige merkwürdige Abkürzungen: akademische Titel Dr.in und Prof.in sowie
+	  // SuS (Schüler und Schülerinnen) sowie LuL (Lehrer und Lehrerinnen)
+	  str = str.replace(/Dr\.in/g,rot1+"Dr."+rot2);
+	  str = str.replace(/Prof\.in/g,rot1+"Prof."+rot2);
+	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[D|d]en|[D|d]enjenigen |[M|m]anchen| [I|i]hren | [B|b]ei| [V|v]on| [Z|z]u) (SuS)/g,"$1 "+rot1+"Schülern"+rot2);
+	  str = str.replace(/SuS/g,rot1+"Schüler"+rot2);
+ 	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[D|d]en|[D|d]enjenigen |[M|m]anchen| [I|i]hren | [B|b]ei| [V|v]on| [Z|z]u) (LuL)/g,"$1 "+rot1+"Lehrern"+rot2);
+	  str = str.replace(/LuL/g,rot1+"Lehrer"+rot2);
 
 
 
