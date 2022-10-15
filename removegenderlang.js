@@ -161,6 +161,7 @@ function removeGender(sollrot) {
 	  str = str.replace(/(w|W)estfäl(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))/g,"$1estfal$2");
 	  str = str.replace(/(s|S)chwän(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))/g,"$1chwan$2");
 	  str = str.replace(/(k|K)öch(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In)([ ,).:“\?"!\-\/\<\&]|$)/g,"$1och$2$3");
+	  str = str.replace(/(s|S)ächs(\·in|\:in|\*in|\/\-in|\/in|In|\_in|\(in|In\))/g,"$1achs$2");
 	  
 	  
 	  // Spezialfälle: Wörter, die auf -erer/-erin enden
