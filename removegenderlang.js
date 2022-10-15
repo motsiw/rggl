@@ -412,13 +412,16 @@ function removeGender(sollrot) {
 	  str = str.replace(/ranzos([ ,).:“\?"!\-\/\<\&]|$)/g,"ranzose$1");
 	  str = str.replace(/ein Katz([ ,).:“\?"!\-\/\<\&]|$)/g,"eine Katze$1");
 	  
-	  // Einige merkwürdige Abkürzungen: akademische Titel Dr.in und Prof.in sowie
-	  // SuS (Schüler und Schülerinnen) sowie LuL (Lehrer und Lehrerinnen)
+	  // akademische Titel Dr.in und Prof.in sowie
 	  str = str.replace(/Dr\.in/g,rot1+"Dr."+rot2);
 	  str = str.replace(/Prof\.in/g,rot1+"Prof."+rot2);
-	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[D|d]en|[D|d]enjenigen |[M|m]anchen| [I|i]hren | [B|b]ei| [V|v]on| [Z|z]u) (SuS)/g,"$1 "+rot1+"Schülern"+rot2);
-	  str = str.replace(/SuS/g,rot1+"Schüler"+rot2);
- 	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[D|d]en|[D|d]enjenigen |[M|m]anchen| [I|i]hren | [B|b]ei| [V|v]on| [Z|z]u) (LuL)/g,"$1 "+rot1+"Lehrern"+rot2);
+	  
+	  // SuS (Schüler und Schülerinnen) sowie LuL (Lehrer und Lehrerinnen)
+	  // Ersetzung für SuS erfolgt aber nur in einigen ausgewählten Zusammensetzungen,
+	  // (wenn nämlich ein Plural erkennbar ist), da SuS auch für Sport- und Spielverein steht
+	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[[A|a]nderen|[D|d]en|[D|d]enjenigen |[M|m]anchen) (SuS)/g,"$1 "+rot1+"Schülern"+rot2);
+	  str = str.replace(/([V|v]ieler?|[E|e]iniger?|[M|m]ehrerer?|[A|a]ller?|[D|d]iverser?|[W|w]eniger?|[E|e]tlicher?|[A|a]nderer?|[D|d]iejenigen|[D|d]erjenigen) (SuS)/g,"$1 "+rot1+"Schüler"+rot2);
+ 	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[D|d]en|[D|d]enjenigen |[M|m]anchen| [S|s]einen| [I|i]hren| [U|u]nseren| [M|m]it | [B|b]ei| [V|v]on| [Z|z]u) (LuL)/g,"$1 "+rot1+"Lehrern"+rot2);
 	  str = str.replace(/LuL/g,rot1+"Lehrer"+rot2);
 
 
