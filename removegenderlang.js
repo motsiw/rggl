@@ -371,11 +371,11 @@ function removeGender(sollrot) {
 	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|soph|mand|erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|iot|brit|mat|päd)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1en"+rot2+"$3");
 	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit|mat|päd)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
 
-	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in
+	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Demagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in
 	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem|jenem) ([a-zA-ZüöäßÜÖÄ]*?)(tient|sell|igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|peut|ilot|mat|päd)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
 	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem|jenem) ([a-zA-ZüöäßÜÖÄ]*?)(tient|sell|igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|Hirt|peut|ilot|mat|päd)In([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1 $2$3en"+rot2+"$4");
 	  
-	  // Einzahl Nominativ für Kolleg*in, Astrolog*in, Expert*in, Dämagog*in, Genoss*in, Kätz*in, Zeug*in
+	  // Einzahl Nominativ für Kolleg*in, Astrolog*in, Expert*in, Demagog*in, Genoss*in, Kätz*in, Zeug*in
 	  str = str.replace(/(kund|pars|sell|leg|log|pert|gog|oss|äst|atz|eug|esid|ries|orb)(\·|\:|\*|\/\-|\/|\_)(in)([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1e"+rot2+"$4");
 	  str = str.replace(/([a-züöäß])(Kund|kund|pars|sell|leg|log|pert|gog|oss|äst|atz|eug|esid|ries|orb)(In)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1$2e"+rot2+"$4");
 	  
