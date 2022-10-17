@@ -1,5 +1,5 @@
-	// Remove German Gender Language
-// v6.1.3
+// Remove German Gender Language
+// v6.1.4
 // License: GPL v3.3
 
 
@@ -372,7 +372,7 @@ function removeGender(sollrot) {
 	  // Nominativ / Akkusativ plural: Bei Nomen, die auf -or, -ist, -leg, -nom, -iech usw. enden, wird das :innen durch en ersetzt.
 	  // Beispiel: Astronom*innen => Astronomen, KollegInnen => Kollegen
 	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|kund|klient|fährt|ürk|ghan|gar|inn|dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|eld|siat|russ|soph|mand|erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|iot|brit|mat|päd|sachs)(\·innen|\:innen|\*innen|\_innen|\/\-innen|\/innen|\(innen\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1en"+rot2+"$3");
-	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss||Weisruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit|mat|päd|sachs)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
+	  str = str.replace(/(narch|pars|sell|orb|ries|ilot|esid|nes|les|klav|isst|krut|igur|erad|or|ist|leg|nom|log|pert|naut|fahr|rat|dat|gog|oss|äst|ent|lyst|graf|zos|atz|ess|fal|ant|peut|urd|lient|fährt|ürk|ghan|gar|inn|dän|Dän|män|asach|les|sbek|bell|mad|iech|iton|ovar|eug|wed|tekt|ir|Ir|eld|siat|Russ|Weißruss||Weissruss|kund|Kund|soph|mand|erb|Erb|lik|thlet|atar|eran|names|bet|arr|rinz|hirt|Hirt|iot|brit|Brit|mat|päd|sachs)(Innen)([ ,).:“\?"!\-\/\<\&]|$)/g,rot1+"$1en"+rot2+"$3");
 
 	  // Einzahl Dativ/Akkusativ für Kolleg*in, Astrolog*in, Expert*in, Demagog*in, Genoss*in, Kätz*in, Zeug*in, Beamt*in
 	  str = str.replace(/(dem|einen|den|einem|diesen|diesem|nchen|elen|igen|nchem|jenem) ([a-zA-ZüöäßÜÖÄ]*?)(tient|sell|igur|leg|log|pert|gog|oss|äst|atz|eug|eamt|hirt|peut|ilot|mat|päd)(\·in|\:in|\*in|\_in|\/\-in|\/in|\(in\))([ ,).:“\?"!\-\/\<\&]|$)/gi,rot1+"$1 $2$3en"+rot2+"$5");
@@ -414,19 +414,6 @@ function removeGender(sollrot) {
 	  str = str.replace(/sraelisen/g,"sraelis");
 	  str = str.replace(/ranzos([ ,).:“\?"!\-\/\<\&]|$)/g,"ranzose$1");
 	  str = str.replace(/ein Katz([ ,).:“\?"!\-\/\<\&]|$)/g,"eine Katze$1");
-	  
-	  // akademische Titel Dr.in und Prof.in sowie
-	  str = str.replace(/Dr\.in/g,rot1+"Dr."+rot2);
-	  str = str.replace(/Prof\.in/g,rot1+"Prof."+rot2);
-	  
-	  // SuS (Schüler und Schülerinnen) sowie LuL (Lehrer und Lehrerinnen)
-	  // Ersetzung für SuS erfolgt aber nur in einigen ausgewählten Zusammensetzungen,
-	  // (wenn nämlich ein Plural erkennbar ist), da SuS auch für Sport- und Spielverein steht
-	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[[A|a]nderen|[D|d]en|[D|d]enjenigen |[M|m]anchen) (SuS)/g,"$1 "+rot1+"Schülern"+rot2);
-	  str = str.replace(/([V|v]ieler?|[E|e]iniger?|[M|m]ehrerer?|[A|a]ller?|[D|d]iverser?|[W|w]eniger?|[E|e]tlicher?|[A|a]nderer?|[D|d]iejenigen|[D|d]erjenigen) (SuS)/g,"$1 "+rot1+"Schüler"+rot2);
- 	  str = str.replace(/([V|v]ielen|[E|e]inigen|[M|m]ehreren|[A|a]llen|[D|d]iversen|[W|w]enigen|[E|e]tlichen|[M|m]eisten|[W|w]enigsten|[D|d]en|[D|d]enjenigen |[M|m]anchen| [S|s]einen| [I|i]hren| [U|u]nseren| [M|m]it | [B|b]ei| [V|v]on| [Z|z]u) (LuL)/g,"$1 "+rot1+"Lehrern"+rot2);
-	  str = str.replace(/LuL/g,rot1+"Lehrer"+rot2);
-
 
 
 	  // prüfen, ob Änderungen innerhalb von href, class oder style-Attributen stattfanden. Wenn ja, wird auf die Korrektur vorsorglich verzichtet
